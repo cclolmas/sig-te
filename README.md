@@ -48,7 +48,7 @@ cd sig-te
 - Python 3.10+
 - Node.js 18+
 - npm 9+
-- (Opcional) Docker
+- Github Action
 
 ### Backend
 ```bash
