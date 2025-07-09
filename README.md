@@ -1,5 +1,7 @@
 # SIG-TE: Sistema Integrado de Gestão do Transporte Escolar
 
+![sigte1](https://github.com/user-attachments/assets/ab097664-0629-425d-82bc-ef222e1540c4)
+
 ## Visão Geral
 O SIG-TE é uma plataforma digital para gestão do transporte escolar, composta por backend (Flask/Python) e frontend (React/Vite/TypeScript), com autenticação JWT, RBAC, dashboards, workflows, notificações, painéis públicos e integração mobile-first.
 
@@ -9,7 +11,7 @@ O SIG-TE é uma plataforma digital para gestão do transporte escolar, composta 
 ![sigte5](https://github.com/user-attachments/assets/ce4c9d7b-4726-4ad6-bba3-2e3c8c4e51b8)
 ![sigte6](https://github.com/user-attachments/assets/99c58259-71d7-4687-a35e-10d4eac8dbc3)
 ![sigte7](https://github.com/user-attachments/assets/13ff3be2-a0fd-4cd3-825c-07f393946656)
-![sigte1](https://github.com/user-attachments/assets/ab097664-0629-425d-82bc-ef222e1540c4)
+
 
 ## Clonando o Repositório
 
