@@ -1,4 +1,4 @@
-# SIG-TE: Sistema Integrado de Gestão do Transporte Escolar
+# SIG-TE: Sistema de Gestão do Transporte Escolar
 
 ![sigte1](https://github.com/user-attachments/assets/ab097664-0629-425d-82bc-ef222e1540c4)
 
