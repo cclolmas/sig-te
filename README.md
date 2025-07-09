@@ -3,6 +3,14 @@
 ## Visão Geral
 O SIG-TE é uma plataforma digital para gestão do transporte escolar, composta por backend (Flask/Python) e frontend (React/Vite/TypeScript), com autenticação JWT, RBAC, dashboards, workflows, notificações, painéis públicos e integração mobile-first.
 
+![sigte2](https://github.com/user-attachments/assets/72287d66-0705-45c0-a4f7-ffb48355d405)
+![sigte3](https://github.com/user-attachments/assets/3ccc850b-a43c-4531-be1d-b9c6e19d8f11)
+![sigte4](https://github.com/user-attachments/assets/5c7c590f-42fe-49a8-bd3f-d26d53685078)
+![sigte5](https://github.com/user-attachments/assets/ce4c9d7b-4726-4ad6-bba3-2e3c8c4e51b8)
+![sigte6](https://github.com/user-attachments/assets/99c58259-71d7-4687-a35e-10d4eac8dbc3)
+![sigte7](https://github.com/user-attachments/assets/13ff3be2-a0fd-4cd3-825c-07f393946656)
+![sigte1](https://github.com/user-attachments/assets/ab097664-0629-425d-82bc-ef222e1540c4)
+
 ## Clonando o Repositório
 
 Para obter o código-fonte do projeto, execute o comando abaixo:
