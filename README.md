@@ -39,7 +39,7 @@ cd sig-te
 
 ## Arquitetura
 - **Backend:** Flask, JWT, RBAC, integração S3, geração de relatórios, documentação OpenAPI, testes Pytest.
-- **Frontend:** React + Vite + TypeScript, Tailwind, Design System gov.br, Service Worker, gráficos (Recharts), QR Code, testes (Vitest, Cypress, Storybook).
+- **Frontend:** React + Vite + TypeScript, Tailwind, Design System gov.br, Service Worker, gráficos (Recharts), QR Code, testes (Vitest, Storybook).
 - **Deploy:** Build unificado, arquivos estáticos do frontend servidos pelo Flask.
 
 ## Configuração do Ambiente
@@ -112,7 +112,7 @@ Execute todos os testes automatizados (backend e frontend):
 ```
 
 - Backend: Pytest (testes de integração, segurança, lógica de negócio)
-- Frontend: Vitest, Testing Library, Storybook, Cypress
+- Frontend: Vitest, Testing Library, Storybook
 
 ## Build e Deploy Unificado
 
