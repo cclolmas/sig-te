@@ -1,0 +1,132 @@
+.homeRoot {
+  width: 100vw;
+  height: 100vh;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+.mainContentArea {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.mapColumn {
+  flex: 1 1 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaeaea;
+  min-width: 0;
+}
+
+.mapPlaceholder {
+  width: 90%;
+  height: 90vh;
+  background: #d9d9d9;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px 0 #0001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #888;
+}
+
+.cardsColumn {
+  flex: 0 0 420px;
+  background: #fff;
+  box-shadow: -2px 0 16px 0 #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 24px 24px;
+  min-width: 320px;
+  max-width: 480px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sigTeTitle {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  color: #E5B800;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.busCard {
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 #0001;
+  margin-bottom: 24px;
+  padding: 20px 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.rotaLink {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cardPlaca {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 600;
+}
+
+.cardBody {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.cardLotacaoValue {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #E5B800;
+}
+
+.cardLotacaoLabel {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .mainContentArea {
+    flex-direction: column;
+  }
+  .mapColumn, .cardsColumn {
+    width: 100vw;
+    height: auto;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .cardsColumn {
+    box-shadow: none;
+    padding: 32px 8px 8px 8px;
+    min-width: 0;
+    max-width: 100vw;
+    height: auto;
+  }
+}

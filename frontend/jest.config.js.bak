@@ -1,0 +1,25 @@
+module.exports = {
+  // Use babel-jest for TS/JS/TSX/JSX files
+  transform: {
+    '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
+  },
+  testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+  // Ignore node_modules except for specific ESM modules if needed
+  transformIgnorePatterns: [
+    '/node_modules/'
+  ],
+  // Ignore .storybook and any storyshots tests
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/.storybook/',
+    '<rootDir>/src/**/*.stories.tsx',
+    '<rootDir>/.storybook/storyshots.test.js'
+  ],
+  // Optionally, add extensions for test files
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  // Collect coverage from src only
+  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
+};

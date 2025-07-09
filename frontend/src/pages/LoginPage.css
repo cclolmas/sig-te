@@ -1,0 +1,95 @@
+/* LoginPage.css - Estilos baseados no Design System gov.br */
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--gray-5);
+}
+
+.login-card {
+  background-color: var(--gray-0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-xl);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-card h1 {
+  font-size: 1.5rem;
+  color: var(--blue-60);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.login-card .form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.login-card .form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--gray-90);
+}
+
+.login-card .form-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--gray-30);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--gray-0);
+  transition: border-color 0.2s ease;
+}
+
+.login-card .form-input:focus {
+  outline: none;
+  border-color: var(--blue-50);
+  box-shadow: 0 0 0 3px rgba(19, 81, 180, 0.1);
+}
+
+.login-card .form-error {
+  color: var(--red-vivid-50);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.login-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.login-card .btn-primary {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}
+
+.login-card .btn-primary:hover {
+  background-color: var(--blue-60);
+}
+
+.login-card .btn-secondary {
+  background-color: var(--gray-0);
+  color: var(--blue-50);
+  border: 2px solid var(--blue-50);
+}
+
+.login-card .btn-secondary:hover {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}

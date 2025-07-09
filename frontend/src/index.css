@@ -1,0 +1,316 @@
+/* Consolidando estilos globais com Design System Gov.br */
+:root {
+  /* Cores Primárias */
+  --blue-50: #1351B4;
+  --blue-60: #0C326F;
+  --blue-40: #4A90E2;
+  /* Cores de Estado */
+  --red-vivid-50: #E52207;
+  --orange-vivid-20: #FFCD07;
+  --green-50: #168821;
+  /* Cores Neutras */
+  --gray-0: #FFFFFF;
+  --gray-5: #F8F9FA;
+  --gray-10: #E9ECEF;
+  --gray-30: #ADB5BD;
+  --gray-60: #6C757D;
+  --gray-90: #212529;
+  --gray-100: #000000;
+  /* Tipografia */
+  --font-family: 'Noto Sans', sans-serif;
+  --font-size-base: 16px;
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  /* Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  /* Bordas */
+  --border-radius: 4px;
+  --border-radius-lg: 8px;
+}
+
+/* Aplicando estilos globais */
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-text);
+  background-color: var(--gray-5);
+  color: var(--gray-90);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--gray-5);
+  color: var(--gray-90);
+  display: flex;
+  place-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-heading);
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--blue-50);
+}
+a:hover {
+  color: var(--blue-60);
+}
+
+button {
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+  padding: var(--spacing-md);
+  transition: background 0.2s;
+}
+button:hover {
+  background-color: var(--blue-60);
+}
+
+/* Animações Globais */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: none;}
+}
+@keyframes fade-in-slow {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-32px);}
+  to { opacity: 1; transform: none;}
+}
+.animate-fade-in { animation: fade-in 0.8s cubic-bezier(.4,0,.2,1) both; }
+.animate-fade-in-slow { animation: fade-in-slow 1.5s cubic-bezier(.4,0,.2,1) both; }
+.animate-slide-down { animation: slide-down 0.7s cubic-bezier(.4,0,.2,1) both; }
+
+/* Reset de margens e padding globais */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Layout principal */
+.main-home {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--gray-5);
+  position: relative;
+  font-family: var(--font-family);
+}
+
+/* Header customizado */
+.sig-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100vw;
+  padding: 0 48px;
+  margin: 0 auto;
+  max-width: 1920px;
+  min-height: 90px;
+}
+.sig-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--blue-60);
+  margin: 32px 0 0 0;
+  letter-spacing: 1px;
+}
+.sig-access-link {
+  font-size: 15px;
+  color: var(--blue-50);
+  margin: 12px 0 0 0;
+  display: block;
+  text-decoration: underline;
+}
+
+/* Menu neon */
+.sig-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin: 48px auto 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.sig-menu-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 28px;
+  text-decoration: none;
+  box-shadow: 0 0 12px 2px rgba(0,0,0,0.08);
+  transition: transform 0.1s, box-shadow 0.1s;
+  display: inline-block;
+}
+.sig-menu-link:nth-child(1) { background: #FFCD07; color: #212529; } /* Neon laranja */
+.sig-menu-link:nth-child(2) { background: #39FF14; color: #212529; } /* Verde cana */
+.sig-menu-link:nth-child(3) { background: #FF2EC6; color: #fff; } /* Rosa choque */
+.sig-menu-link:nth-child(4) { background: #B266FF; color: #fff; } /* Lilás */
+.sig-menu-link:nth-child(5) { background: #FF6F91; color: #fff; } /* Rosa neon extra */
+.sig-menu-link:hover { transform: scale(1.06); box-shadow: 0 0 18px 4px rgba(0,0,0,0.12); }
+
+/* Mapa centralizado - ocupa ao menos 65% de 1920x1080 */
+.sig-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 32px 0;
+  width: 100vw;
+  min-height: 700px;
+}
+.sig-map-placeholder {
+  width: 1248px; /* 65% de 1920px */
+  height: 702px; /* 65% de 1080px */
+  background: linear-gradient(135deg, #e9ecef 60%, #b3c6e7 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(44, 62, 80, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-60);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* SIG-TE box ao lado do mapa */
+.sig-te-box {
+  background: var(--blue-50);
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 24px;
+  padding: 48px 56px;
+  margin-right: 40px;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.10);
+  letter-spacing: 1px;
+  height: 702px;
+  min-width: 180px;
+  gap: 0;
+}
+
+/* Ajuste do container do mapa e box */
+.sig-map-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 32px 0;
+  width: 100vw;
+}
+
+/* Cards de lotação */
+.sig-cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+.sig-bus-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.10);
+  padding: 32px 40px;
+  min-width: 220px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--blue-60);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.sig-bus-card .sig-bus-label {
+  font-size: 13px;
+  color: var(--gray-60);
+  margin-bottom: 6px;
+}
+.sig-bus-card .sig-bus-value {
+  font-size: 28px;
+  color: var(--red-vivid-50);
+  font-weight: bold;
+}
+
+/* Rodapé fixo */
+.sig-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: transparent;
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-60);
+  padding: 16px 0 12px 0;
+  z-index: 100;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1400px) {
+  .sig-map-placeholder, .sig-te-box {
+    width: 90vw;
+    min-width: 0;
+    height: 400px;
+    padding: 24px 12px;
+  }
+  .sig-map-placeholder {
+    width: 60vw;
+    height: 400px;
+  }
+  .sig-te-box {
+    height: 400px;
+    padding: 24px 12px;
+  }
+  .sig-bus-card {
+    min-width: 120px;
+    padding: 16px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sig-map-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sig-te-box {
+    margin-right: 0;
+    margin-bottom: 24px;
+    height: 120px;
+    padding: 16px 8px;
+    font-size: 20px;
+  }
+  .sig-map-placeholder {
+    width: 90vw;
+    height: 200px;
+    font-size: 1rem;
+  }
+  .sig-menu {
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px auto 0 auto;
+  }
+  .sig-menu-link {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}

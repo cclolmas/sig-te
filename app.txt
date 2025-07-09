@@ -1,0 +1,4593 @@
+/* Design System Gov.br - Cores e Estilos */
+:root {
+  /* Cores Primárias */
+  --blue-50: #1351B4;
+  --blue-60: #0C326F;
+  --blue-40: #4A90E2;
+  
+  /* Cores de Estado */
+  --red-vivid-50: #E52207;
+  --orange-vivid-20: #FFCD07;
+  --green-50: #168821;
+  
+  /* Cores Neutras */
+  --gray-0: #FFFFFF;
+  --gray-5: #F8F9FA;
+  --gray-10: #E9ECEF;
+  --gray-30: #ADB5BD;
+  --gray-60: #6C757D;
+  --gray-90: #212529;
+  --gray-100: #000000;
+  
+  /* Tipografia */
+  --font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 16px;
+  --font-size-base-mobile: 14px;
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  
+  /* Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Bordas */
+  --border-radius: 4px;
+  --border-radius-lg: 8px;
+}
+
+/* Reset e Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-text);
+  color: var(--gray-90);
+  background-color: var(--gray-5);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--font-size-base-mobile);
+  }
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-heading);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--blue-60);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--blue-60);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--gray-90);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.btn-primary {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-60);
+}
+
+.btn-secondary {
+  background-color: var(--gray-0);
+  color: var(--blue-50);
+  border: 2px solid var(--blue-50);
+}
+
+.btn-secondary:hover {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}
+
+.btn-success {
+  background-color: var(--green-50);
+  color: var(--gray-0);
+}
+
+.btn-danger {
+  background-color: var(--red-vivid-50);
+  color: var(--gray-0);
+}
+
+.btn-warning {
+  background-color: var(--orange-vivid-20);
+  color: var(--gray-90);
+}
+
+/* Formulários */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--gray-90);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--gray-30);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--gray-0);
+  transition: border-color 0.2s ease;
+  min-height: 44px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue-50);
+  box-shadow: 0 0 0 3px rgba(19, 81, 180, 0.1);
+}
+
+.form-input.error {
+  border-color: var(--red-vivid-50);
+}
+
+.form-error {
+  color: var(--red-vivid-50);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.form-help {
+  color: var(--gray-60);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+/* Cards */
+.card {
+  background-color: var(--gray-0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Alertas */
+.alert {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid;
+}
+
+.alert-info {
+  background-color: #E3F2FD;
+  border-color: var(--blue-50);
+  color: var(--blue-60);
+}
+
+.alert-success {
+  background-color: #E8F5E8;
+  border-color: var(--green-50);
+  color: #2E7D32;
+}
+
+.alert-warning {
+  background-color: #FFF8E1;
+  border-color: var(--orange-vivid-20);
+  color: #F57C00;
+}
+
+.alert-error {
+  background-color: #FFEBEE;
+  border-color: var(--red-vivid-50);
+  color: #C62828;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .card {
+    padding: var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.375rem;
+  }
+}
+
+/* Acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible para navegação por teclado */
+.btn:focus-visible,
+.form-input:focus-visible {
+  outline: 2px solid var(--blue-50);
+  outline-offset: 2px;
+}
+
+/* Estados de loading */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.spinner {
+  border: 2px solid var(--gray-30);
+  border-top: 2px solid var(--blue-50);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: var(--spacing-xs);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// js/ui/quickActions.js
+import { showModal } from "./modals.js";
+
+export function setupQuickActions() {
+    const actionCards = document.querySelectorAll(".action-card");
+
+    actionCards.forEach((card) => {
+        card.addEventListener("click", function () {
+            const action = this.getAttribute("data-action");
+            handleQuickAction(action);
+        });
+
+        // Efeito de hover
+        card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-4px)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+        });
+    });
+}
+
+export function handleQuickAction(action) {
+    switch (action) {
+        case "new-student":
+            showModal("Cadastrar Novo Estudante", getNewStudentFormHTML());
+            break;
+        case "new-route":
+            showModal("Criar Novo Itinerário", getNewRouteFormHTML());
+            break;
+        case "extracurricular":
+            window.open("https://yxujymqw.manus.space", "_blank");
+            break;
+        case "maintenance":
+            showModal("Agendar Manutenção", getMaintenanceFormHTML());
+            break;
+        case "report":
+            showModal("Gerar Relatório", getReportFormHTML());
+            break;
+        case "emergency":
+            showModal("Registrar Emergência", getEmergencyFormHTML());
+            break;
+    }
+}
+
+// Funções de formulário (ainda não implementadas, mas mantidas para consistência)
+function getNewStudentFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="studentName">Nome Completo:</label>
+                <input type="text" id="studentName" class="form-control" placeholder="Nome do Estudante" required>
+            </div>
+            <div class="form-group">
+                <label for="studentMatricula">Matrícula:</label>
+                <input type="text" id="studentMatricula" class="form-control" placeholder="Matrícula" required>
+            </div>
+            <div class="form-group">
+                <label for="studentSchool">Escola:</label>
+                <input type="text" id="studentSchool" class="form-control" placeholder="Escola" required>
+            </div>
+            <div class="form-group">
+                <label for="studentRoute">Rota:</label>
+                <input type="text" id="studentRoute" class="form-control" placeholder="Rota de Transporte">
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    `;
+}
+
+function getNewRouteFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="routeName">Nome da Rota:</label>
+                <input type="text" id="routeName" class="form-control" placeholder="Ex: Rota Asa Norte" required>
+            </div>
+            <div class="form-group">
+                <label for="routeCapacity">Capacidade do Veículo:</label>
+                <input type="number" id="routeCapacity" class="form-control" placeholder="Ex: 38" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Criar Rota</button>
+        </form>
+    `;
+}
+
+function getMaintenanceFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="vehicleId">ID do Veículo:</label>
+                <input type="text" id="vehicleId" class="form-control" placeholder="Ex: PCE001" required>
+            </div>
+            <div class="form-group">
+                <label for="maintenanceDate">Data da Manutenção:</label>
+                <input type="date" id="maintenanceDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="maintenanceType">Tipo de Manutenção:</label>
+                <select id="maintenanceType" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="preventiva">Preventiva</option>
+                    <option value="corretiva">Corretiva</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar</button>
+        </form>
+    `;
+}
+
+function getReportFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="reportType">Tipo de Relatório:</label>
+                <select id="reportType" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="estudantes">Estudantes</option>
+                    <option value="frota">Frota</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="ocorrencias">Ocorrências</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reportPeriod">Período:</label>
+                <select id="reportPeriod" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="diario">Diário</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensal">Mensal</option>
+                    <option value="anual">Anual</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Gerar Relatório</button>
+        </form>
+    `;
+}
+
+function getEmergencyFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="emergencyVehicle">Veículo Envolvido:</label>
+                <input type="text" id="emergencyVehicle" class="form-control" placeholder="ID do Veículo" required>
+            </div>
+            <div class="form-group">
+                <label for="emergencyType">Tipo de Emergência:</label>
+                <select id="emergencyType" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="acidente">Acidente</option>
+                    <option value="pane">Pane Mecânica</option>
+                    <option value="saude">Problema de Saúde</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="emergencyDescription">Descrição:</label>
+                <textarea id="emergencyDescription" class="form-control" rows="3" placeholder="Detalhes da ocorrência"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Registrar Emergência</button>
+        </form>
+    `;
+}
+
+
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+const ConfirmationPage = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState(null);
+
+  useEffect(() => {
+    const savedData = localStorage.getItem('requerimentoData');
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    } else {
+      navigate('/formulario');
+    }
+  }, [navigate]);
+
+  const formatDate = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('pt-BR');
+  };
+
+  const formatTime = (timeString) => {
+    if (!timeString) return '';
+    return timeString;
+  };
+
+  const generatePDF = () => {
+    // Simular geração de PDF
+    alert('Funcionalidade de geração de PDF será implementada. Por enquanto, você pode copiar os dados abaixo e colar no sistema SEI.');
+  };
+
+  const downloadTXT = () => {
+    if (!formData) return;
+
+    const content = `REQUERIMENTO DE TRANSPORTE ESCOLAR PARA ATIVIDADE EXTRACURRICULAR
+
+DADOS DA ATIVIDADE EXTRACURRICULAR
+Unidade Escolar Solicitante: ${formData.unidadeEscolar}
+Nome da Atividade: ${formData.nomeAtividade}
+Nome do Local da Atividade: ${formData.localAtividade}
+Horário da Atividade: ${formatTime(formData.horarioAtividade)}
+Data da Atividade: ${formatDate(formData.dataAtividade)}
+Horário de Embarque na IDA: ${formatTime(formData.horarioEmbarqueIda)}
+Horário de Embarque na VOLTA: ${formatTime(formData.horarioEmbarqueVolta)}
+
+INFORMAÇÕES DE TRANSPORTE
+Endereço (com CEP) de Embarque (origem): ${formData.enderecoEmbarque}, CEP: ${formData.cepEmbarque}
+Endereço (com CEP) de Desembarque (destino): ${formData.enderecoDesembarque}, CEP: ${formData.cepDesembarque}
+Estimativa de Quilometragem do Trajeto (IDA E VOLTA): ${formData.quilometragem}km
+Número Total de Passageiros: ${formData.numeroPassageiros}
+Lista Nominal e Numerada dos Estudantes Autorizados a Participar foi Anexada ao Processo: ${formData.listaAnexada === 'sim' ? 'Sim' : 'Não'}
+Quantidade de Veículos Necessários (38 passageiros por veículo): ${formData.quantidadeVeiculos} veículos
+Necessidade de veículo coletivo com acessibilidade para pessoas com deficiência ou mobilidade reduzida: ${formData.acessibilidade === 'sim' ? 'Sim' : 'Não'}
+
+JUSTIFICATIVA PEDAGÓGICA (para análise da UNIEB):
+${formData.justificativaPedagogica}
+
+OBSERVAÇÕES IMPORTANTES:
+1) Preencher um requerimento por turno e/ou dia (dentro do mesmo processo quando se tratar da mesma atividade).
+2) Solicitações de serviço de transporte escolar para atividades extracurriculares devem ser encaminhadas à UNIAE, via SEI, com antecedência mínima de 15 (quinze) dias em relação à data do evento.
+3) O número de veículos necessários deverá considerar apenas os estudantes autorizados a irem ao evento.
+4) O envio da lista nominal e numerada dos estudantes que utilizarão o transporte é obrigatório.
+5) Em razão da frota utilizada para atividades extracurriculares ser a mesma que atende aos itinerários regulares casa-escola-casa, o serviço de transporte escolar para atividades extracurriculares será ofertado exclusivamente nos horários a seguir: das 9h (saída da escola) às 11h (retorno à escola) no turno matutino e das 14h (saída da escola) às 16h (retorno à escola) no turno vespertino, não havendo, portanto, oferta de serviço de transporte escolar para atividades extracurriculares no período integral (manhã e tarde) e/ou no turno noturno.
+6) Em atendimento à Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018), os processos de solicitação de transporte escolar devem ser gerados com nível de acesso RESTRITO.
+7) Eventuais cancelamentos devem ser comunicados à UNIAE, via SEI, com antecedência mínima de 48 (quarenta e oito) horas, a fim de que a empresa responsável pela gestão do transporte seja comunicada a tempo.
+
+ATENÇÃO, GESTOR! O deslocamento desnecessário do veículo (sem o cancelamento prévio da UE) gera despesa pública que poderá configurar dano ao erário, com possível responsabilização por ato comissivo ou omissivo, conforme art. 183 da Lei Complementar nº 840 de 23/12/2011.
+
+Declaro estar ciente dos termos acima e solicito serviço de transporte escolar para realização de atividade extracurricular conforme os dados informados.
+
+Gerado em: ${new Date().toLocaleString('pt-BR')}
+Sistema de Atividades Extracurriculares - SEDF`;
+
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `requerimento-transporte-${formData.nomeAtividade.replace(/[^a-zA-Z0-9]/g, '-')}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  if (!formData) {
+    return (
+      <div style={{ padding: '48px 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center' }}>
+            <div className="spinner" style={{ width: '40px', height: '40px' }}></div>
+            <p>Carregando dados...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ padding: '48px 0' }}>
+      <div className="container">
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          {/* Sucesso */}
+          <div className="alert alert-success" style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <div style={{ fontSize: '48px', marginBottom: '16px' }}>✅</div>
+            <h1 style={{ margin: '0 0 16px 0', color: '#2E7D32' }}>
+              Requerimento Gerado com Sucesso!
+            </h1>
+            <p style={{ margin: '0', fontSize: '1.125rem' }}>
+              Seu requerimento foi processado e está pronto para ser enviado via SEI.
+            </p>
+          </div>
+
+          {/* Ações */}
+          <div style={{ 
+            display: 'flex', 
+            gap: '16px', 
+            justifyContent: 'center', 
+            marginBottom: '32px',
+            flexWrap: 'wrap'
+          }}>
+            <button onClick={downloadTXT} className="btn btn-primary">
+              📄 Baixar Requerimento (.txt)
+            </button>
+            <button onClick={generatePDF} className="btn btn-secondary">
+              📋 Gerar PDF (Em breve)
+            </button>
+          </div>
+
+          {/* Resumo dos dados */}
+          <div className="card">
+            <h2 style={{ marginBottom: '24px', textAlign: 'center' }}>
+              Resumo do Requerimento
+            </h2>
+
+            {/* Dados da Atividade */}
+            <section style={{ marginBottom: '32px' }}>
+              <h3 style={{ 
+                fontSize: '1.25rem', 
+                marginBottom: '16px', 
+                paddingBottom: '8px',
+                borderBottom: '1px solid var(--gray-30)'
+              }}>
+                Dados da Atividade Extracurricular
+              </h3>
+              
+              <div style={{ display: 'grid', gap: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Unidade Escolar:</strong>
+                  <span>{formData.unidadeEscolar}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Nome da Atividade:</strong>
+                  <span>{formData.nomeAtividade}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Local da Atividade:</strong>
+                  <span>{formData.localAtividade}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Data da Atividade:</strong>
+                  <span>{formatDate(formData.dataAtividade)}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Horário da Atividade:</strong>
+                  <span>{formatTime(formData.horarioAtividade)}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Embarque - IDA:</strong>
+                  <span>{formatTime(formData.horarioEmbarqueIda)}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Embarque - VOLTA:</strong>
+                  <span>{formatTime(formData.horarioEmbarqueVolta)}</span>
+                </div>
+              </div>
+            </section>
+
+            {/* Informações de Transporte */}
+            <section style={{ marginBottom: '32px' }}>
+              <h3 style={{ 
+                fontSize: '1.25rem', 
+                marginBottom: '16px', 
+                paddingBottom: '8px',
+                borderBottom: '1px solid var(--gray-30)'
+              }}>
+                Informações de Transporte
+              </h3>
+              
+              <div style={{ display: 'grid', gap: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Endereço Embarque:</strong>
+                  <span>{formData.enderecoEmbarque}, CEP: {formData.cepEmbarque}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Endereço Desembarque:</strong>
+                  <span>{formData.enderecoDesembarque}, CEP: {formData.cepDesembarque}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Quilometragem:</strong>
+                  <span>{formData.quilometragem} km (ida e volta)</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Nº de Passageiros:</strong>
+                  <span>{formData.numeroPassageiros}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Veículos Necessários:</strong>
+                  <span>{formData.quantidadeVeiculos}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Lista Anexada:</strong>
+                  <span>{formData.listaAnexada === 'sim' ? 'Sim' : 'Não'}</span>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '8px', alignItems: 'start' }}>
+                  <strong>Acessibilidade:</strong>
+                  <span>{formData.acessibilidade === 'sim' ? 'Sim' : 'Não'}</span>
+                </div>
+              </div>
+            </section>
+
+            {/* Justificativa */}
+            <section style={{ marginBottom: '32px' }}>
+              <h3 style={{ 
+                fontSize: '1.25rem', 
+                marginBottom: '16px', 
+                paddingBottom: '8px',
+                borderBottom: '1px solid var(--gray-30)'
+              }}>
+                Justificativa Pedagógica
+              </h3>
+              <p style={{ 
+                backgroundColor: 'var(--gray-5)', 
+                padding: '16px', 
+                borderRadius: '4px',
+                margin: '0',
+                lineHeight: '1.6'
+              }}>
+                {formData.justificativaPedagogica}
+              </p>
+            </section>
+          </div>
+
+          {/* Próximos passos */}
+          <div className="alert alert-info">
+            <h3 style={{ marginBottom: '16px' }}>📋 Próximos Passos</h3>
+            <ol style={{ margin: '0', paddingLeft: '20px' }}>
+              <li style={{ marginBottom: '8px' }}>
+                Baixe o arquivo do requerimento clicando no botão acima
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                Acesse o sistema SEI da sua unidade escolar
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                Crie um novo processo com <strong>nível de acesso RESTRITO</strong> (LGPD)
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                Anexe o requerimento e a lista nominal dos estudantes
+              </li>
+              <li style={{ marginBottom: '8px' }}>
+                Encaminhe para a UNIAE com pelo menos 15 dias de antecedência
+              </li>
+            </ol>
+          </div>
+
+          {/* Botões de navegação */}
+          <div style={{ 
+            display: 'flex', 
+            gap: '16px', 
+            justifyContent: 'center', 
+            marginTop: '32px',
+            flexWrap: 'wrap'
+          }}>
+            <Link to="/" className="btn btn-secondary">
+              🏠 Voltar ao Início
+            </Link>
+            <Link to="/formulario" className="btn btn-primary">
+              ➕ Novo Requerimento
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ConfirmationPage;
+
+// js/main.js
+import { setupNavigation, navigateToPage } from './ui/navigation.js';
+import { setupCounters, setupRealTimeUpdates, updateLastUpdateTime, refreshDashboardData } from './ui/dashboard.js';
+import { setupMapInteractions, showVehicleDetails, generateVehicleDetailsHTML } from './ui/map.js';
+import { setupQuickActions, handleQuickAction } from './ui/quickActions.js';
+import { setupFilters, handleSearch, handleFilterChange, applyFilters } from './ui/filters.js';
+import { setupCharts, drawOccupancyChart, drawCostsChart } from './ui/charts.js';
+import { showModal, closeModal, getNewStudentFormHTML, getNewRouteFormHTML, getMaintenanceFormHTML, getReportFormHTML, getEmergencyFormHTML } from './ui/modals.js';
+import { startRealTimeSimulation, loadStudentsData, loadFleetData, loadFinancialData, loadReportsData, loadExtracurricularData } from './services/dataService.js';
+import { appState } from './state.js';
+import { setupTooltips, showSearchResults } from './utils/utils.js';
+
+export function initializeApp() {
+    console.log('🚌 Inicializando SIG-TE...');
+    
+    // Configurar navegação
+    setupNavigation();
+    
+    // Configurar contadores animados
+    setupCounters();
+    
+    // Configurar atualizações em tempo real
+    setupRealTimeUpdates();
+    
+    // Configurar interações do mapa
+    setupMapInteractions();
+    
+    // Configurar ações rápidas
+    setupQuickActions();
+    
+    // Configurar filtros e busca
+    setupFilters();
+    
+    // Configurar gráficos
+    setupCharts();
+    
+    // Configurar tooltips
+    setupTooltips();
+    
+    // Iniciar simulação de dados em tempo real
+    startRealTimeSimulation();
+    
+    console.log('✅ SIG-TE inicializado com sucesso!');
+}
+
+export function handlePageSpecificActions(pageId) {
+    switch(pageId) {
+        case 'dashboard':
+            refreshDashboardData();
+            break;
+        case 'estudantes':
+            loadStudentsData();
+            break;
+        case 'frota':
+            loadFleetData();
+            break;
+        case 'financeiro':
+            loadFinancialData();
+            break;
+        case 'extracurriculares':
+            loadExtracurricularData();
+            break;
+        case 'relatorios':
+            loadReportsData();
+            break;
+    }
+}
+
+// Expondo funções para uso global, se necessário (para testes ou depuração)
+window.navigateToPage = navigateToPage;
+window.showModal = showModal;
+window.closeModal = closeModal;
+window.appState = appState;
+window.handlePageSpecificActions = handlePageSpecificActions;
+window.showVehicleDetails = showVehicleDetails;
+window.generateVehicleDetailsHTML = generateVehicleDetailsHTML;
+window.handleQuickAction = handleQuickAction;
+window.handleSearch = handleSearch;
+window.handleFilterChange = handleFilterChange;
+window.applyFilters = applyFilters;
+window.drawOccupancyChart = drawOccupancyChart;
+window.drawCostsChart = drawCostsChart;
+window.updateLastUpdateTime = updateLastUpdateTime;
+window.showSearchResults = showSearchResults;
+window.loadStudentsData = loadStudentsData;
+window.loadFleetData = loadFleetData;
+window.loadFinancialData = loadFinancialData;
+window.loadReportsData = loadReportsData;
+window.loadExtracurricularData = loadExtracurricularData;
+
+
+// js/services/dataService.js
+import { updateAppState } from "../state.js";
+import { updateLastUpdateTime } from "../ui/dashboard.js";
+
+export function startRealTimeSimulation() {
+    console.log("Iniciando simulação de dados em tempo real...");
+    setInterval(() => {
+        // Simular atualização de dados
+        const newStudents = Math.floor(Math.random() * 100) + 12800;
+        const newVehicles = Math.floor(Math.random() * 5) + 150;
+        const newOccupancy = Math.floor(Math.random() * 20) + 70;
+        const newKmMonth = Math.floor(Math.random() * 1000) + 45000;
+        const newIncidents = Math.floor(Math.random() * 5);
+        const newMonthlyCost = Math.floor(Math.random() * 100) + 2800;
+
+        updateAppState({
+            realTimeData: {
+                students: newStudents,
+                vehicles: newVehicles,
+                occupancy: newOccupancy,
+                kmMonth: newKmMonth,
+                incidents: newIncidents,
+                monthlyCost: newMonthlyCost,
+            },
+        });
+        updateLastUpdateTime();
+        console.log("Dados em tempo real atualizados.");
+    }, 10000); // Atualiza a cada 10 segundos
+}
+
+export function loadStudentsData() {
+    console.log("Carregando dados de estudantes...");
+    // Lógica para carregar dados reais de estudantes
+    // Por enquanto, apenas um log para indicar que a função foi chamada
+}
+
+export function loadFleetData() {
+    console.log("Carregando dados da frota...");
+    // Lógica para carregar dados reais da frota
+    // Por enquanto, apenas um log para indicar que a função foi chamada
+}
+
+export function loadFinancialData() {
+    console.log("Carregando dados financeiros...");
+    // Lógica para carregar dados reais financeiros
+    // Por enquanto, apenas um log para indicar que a função foi chamada
+}
+
+export function loadReportsData() {
+    console.log("Carregando dados de relatórios...");
+    // Lógica para carregar dados reais de relatórios
+    // Por enquanto, apenas um log para indicar que a função foi chamada
+}
+
+export function loadExtracurricularData() {
+    console.log("Carregando dados de atividades extracurriculares...");
+    // Lógica para carregar dados reais de atividades extracurriculares
+    // Por enquanto, apenas um log para indicar que a função foi chamada
+}
+
+
+// js/ui/map.js
+import { showModal } from "./modals.js";
+
+export function setupMapInteractions() {
+    const vehicleMarkers = document.querySelectorAll(".vehicle-marker");
+    const refreshMapBtn = document.getElementById("refreshMap");
+    const fullscreenMapBtn = document.getElementById("fullscreenMap");
+
+    // Interações com marcadores de veículos
+    vehicleMarkers.forEach((marker) => {
+        marker.addEventListener("click", function () {
+            const vehicleId = this.getAttribute("data-vehicle");
+            showVehicleDetails(vehicleId);
+        });
+
+        // Animação de hover
+        marker.addEventListener("mouseenter", function () {
+            this.style.transform = "scale(1.3)";
+            this.style.zIndex = "100";
+        });
+
+        marker.addEventListener("mouseleave", function () {
+            this.style.transform = "scale(1)";
+            this.style.zIndex = "1";
+        });
+    });
+
+    // Botão de atualizar mapa
+    if (refreshMapBtn) {
+        refreshMapBtn.addEventListener("click", function () {
+            refreshMapData();
+
+            // Animação de loading
+            const icon = this.querySelector("i");
+            icon.classList.add("fa-spin");
+            setTimeout(() => icon.classList.remove("fa-spin"), 1000);
+        });
+    }
+
+    // Botão de tela cheia
+    if (fullscreenMapBtn) {
+        fullscreenMapBtn.addEventListener("click", function () {
+            toggleMapFullscreen();
+        });
+    }
+}
+
+export function showVehicleDetails(vehicleId) {
+    // Simular dados do veículo
+    const vehicleData = {
+        // Em Rota (13)
+        AN001: {
+            id: "AN001",
+            route: "Asa Norte - L2 Norte",
+            passengers: 25,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Ana Costa",
+            speed: "30 km/h",
+            nextStop: "SQN 205",
+            eta: "08:30",
+        },
+        AN002: {
+            id: "AN002",
+            route: "Asa Norte - SQN 405",
+            passengers: 30,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Bruno Lima",
+            speed: "32 km/h",
+            nextStop: "Colégio Militar",
+            eta: "08:45",
+        },
+        AN003: {
+            id: "AN003",
+            route: "Asa Norte - UnB",
+            passengers: 15,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Carla Dias",
+            speed: "28 km/h",
+            nextStop: "Faculdade de Educação",
+            eta: "09:00",
+        },
+        AS001: {
+            id: "AS001",
+            route: "Asa Sul - W3 Sul",
+            passengers: 28,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Daniel Rocha",
+            speed: "35 km/h",
+            nextStop: "Hospital de Base",
+            eta: "08:50",
+        },
+        AS002: {
+            id: "AS002",
+            route: "Asa Sul - SGAS 910",
+            passengers: 20,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Eduarda Santos",
+            speed: "31 km/h",
+            nextStop: "Escola Parque",
+            eta: "09:10",
+        },
+        AS003: {
+            id: "AS003",
+            route: "Asa Sul - Eixo Sul",
+            passengers: 35,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Felipe Costa",
+            speed: "38 km/h",
+            nextStop: "Rodoviária",
+            eta: "08:20",
+        },
+        LN001: {
+            id: "LN001",
+            route: "Lago Norte - QI 05",
+            passengers: 22,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Gabriela Alves",
+            speed: "29 km/h",
+            nextStop: "Comércio Local",
+            eta: "08:55",
+        },
+        LN002: {
+            id: "LN002",
+            route: "Lago Norte - CA 02",
+            passengers: 18,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Henrique Pereira",
+            speed: "27 km/h",
+            nextStop: "Ponto de Ônibus",
+            eta: "09:05",
+        },
+        LS001: {
+            id: "LS001",
+            route: "Lago Sul - QI 29",
+            passengers: 27,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Isabela Gomes",
+            speed: "33 km/h",
+            nextStop: "Ponte JK",
+            eta: "08:40",
+        },
+        LS002: {
+            id: "LS002",
+            route: "Lago Sul - SHIS QL 10",
+            passengers: 31,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Juliana Martins",
+            speed: "36 km/h",
+            nextStop: "Jardim Botânico",
+            eta: "09:15",
+        },
+        PP001: {
+            id: "PP001",
+            route: "Plano Piloto - Esplanada",
+            passengers: 29,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Kleber Souza",
+            speed: "25 km/h",
+            nextStop: "Congresso Nacional",
+            eta: "08:35",
+        },
+        PP002: {
+            id: "PP002",
+            route: "Plano Piloto - Setor Comercial",
+            passengers: 26,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Larissa Fernandes",
+            speed: "20 km/h",
+            nextStop: "Torre de TV",
+            eta: "09:00",
+        },
+        PP003: {
+            id: "PP003",
+            route: "Plano Piloto - Rodoviária",
+            passengers: 33,
+            capacity: 38,
+            status: "Em rota",
+            driver: "Marcelo Rodrigues",
+            speed: "22 km/h",
+            nextStop: "Plataforma Superior",
+            eta: "08:25",
+        },
+
+        // Parado (8)
+        ANP01: {
+            id: "ANP01",
+            route: "Asa Norte - Estacionamento",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Nara Oliveira",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        ANP02: {
+            id: "ANP02",
+            route: "Asa Norte - Terminal",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Otávio Costa",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        ASP01: {
+            id: "ASP01",
+            route: "Asa Sul - Estacionamento",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Patrícia Almeida",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        ASP02: {
+            id: "ASP02",
+            route: "Asa Sul - Terminal",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Queiroz Batista",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        LNP01: {
+            id: "LNP01",
+            route: "Lago Norte - Garagem",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Renata Carvalho",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        LNP02: {
+            id: "LNP02",
+            route: "Lago Norte - Ponto Final",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Sérgio Dantas",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        LSP01: {
+            id: "LSP01",
+            route: "Lago Sul - Garagem",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Tatiane Vieira",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+        LSP02: {
+            id: "LSP02",
+            route: "Lago Sul - Ponto Final",
+            passengers: 0,
+            capacity: 38,
+            status: "Parado",
+            driver: "Ubiratan Xavier",
+            speed: "0 km/h",
+            nextStop: "Aguardando",
+            eta: "--",
+        },
+    };
+
+    const vehicle = vehicleData[vehicleId];
+    if (vehicle) {
+        showModal("Detalhes do Veículo", generateVehicleDetailsHTML(vehicle));
+    }
+}
+
+export function generateVehicleDetailsHTML(vehicle) {
+    const occupancyPercentage = Math.round((vehicle.passengers / vehicle.capacity) * 100);
+    const statusClass = vehicle.status === "Em rota" ? "success" : "warning";
+
+    return `
+        <div class="vehicle-details">
+            <div class="vehicle-header">
+                <div class="vehicle-id">
+                    <i class="fas fa-bus"></i>
+                    <h3>${vehicle.id}</h3>
+                </div>
+                <span class="status-badge ${statusClass}">${vehicle.status}</span>
+            </div>
+            
+            <div class="vehicle-info-grid">
+                <div class="info-item">
+                    <label>Rota:</label>
+                    <span>${vehicle.route}</span>
+                </div>
+                <div class="info-item">
+                    <label>Motorista:</label>
+                    <span>${vehicle.driver}</span>
+                </div>
+                <div class="info-item">
+                    <label>Velocidade:</label>
+                    <span>${vehicle.speed}</span>
+                </div>
+                <div class="info-item">
+                    <label>Próxima Parada:</label>
+                    <span>${vehicle.nextStop}</span>
+                </div>
+                <div class="info-item">
+                    <label>Previsão de Chegada:</label>
+                    <span>${vehicle.eta}</span>
+                </div>
+            </div>
+            
+            <div class="occupancy-info">
+                <label>Ocupação:</label>
+                <div class="occupancy-bar">
+                    <div class="occupancy-fill" style="width: ${occupancyPercentage}%"></div>
+                </div>
+                <span>${vehicle.passengers}/${vehicle.capacity} (${occupancyPercentage}%)</span>
+            </div>
+            
+            <div class="vehicle-actions">
+                <button class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    Contatar Motorista
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-route"></i>
+                    Ver Rota Completa
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-history"></i>
+                    Histórico
+                </button>
+            </div>
+        </div>
+    `;
+}
+
+function refreshMapData() {
+    console.log("Atualizando dados do mapa...");
+    // Lógica para buscar e atualizar dados do mapa
+    // Aqui você pode adicionar lógica para atualizar a posição dos ônibus
+    // ou buscar novos dados de um backend
+}
+
+function toggleMapFullscreen() {
+    console.log("Alternando modo tela cheia do mapa...");
+    // Lógica para alternar tela cheia
+    // Isso pode envolver a manipulação de classes CSS ou a API Fullscreen
+}
+
+
+// js/ui/navigation.js
+import { appState, updateAppState } from "../state.js";
+import { handlePageSpecificActions } from "../main.js";
+
+export function setupNavigation() {
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const page = this.getAttribute("data-page");
+            navigateToPage(page);
+        });
+    });
+
+    // Lidar com o carregamento inicial da página
+    const initialPage = window.location.hash.substring(1) || 'dashboard';
+    navigateToPage(initialPage);
+}
+
+export function navigateToPage(pageId) {
+    // Atualizar estado
+    updateAppState({ currentPage: pageId });
+
+    // Esconder todas as páginas
+    const pages = document.querySelectorAll(".page");
+    pages.forEach((page) => {
+        page.classList.remove("active");
+    });
+
+    // Mostrar página selecionada
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add("active");
+
+        // Adicionar animação de entrada
+        targetPage.style.animation = "fadeIn 0.3s ease";
+    }
+
+    // Atualizar navegação ativa
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => link.classList.remove("active"));
+
+    const activeLink = document.querySelector(`[data-page="${pageId}"]`);
+    if (activeLink) {
+        activeLink.classList.add("active");
+    }
+
+    // Atualizar a URL sem recarregar a página
+    window.history.pushState({ page: pageId }, "", `#${pageId}`);
+
+    // Rolar para o topo
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Executar ações específicas da página
+    handlePageSpecificActions(pageId);
+}
+
+
+
+
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const FormPage = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    unidadeEscolar: '',
+    nomeAtividade: '',
+    localAtividade: '',
+    horarioAtividade: '',
+    dataAtividade: '',
+    horarioEmbarqueIda: '',
+    horarioEmbarqueVolta: '',
+    enderecoEmbarque: '',
+    cepEmbarque: '',
+    enderecoDesembarque: '',
+    cepDesembarque: '',
+    quilometragem: '',
+    numeroPassageiros: '',
+    listaAnexada: '',
+    quantidadeVeiculos: '',
+    acessibilidade: '',
+    justificativaPedagogica: '',
+    declaracaoCiente: false
+  });
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const newValue = type === 'checkbox' ? checked : value;
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: newValue
+    }));
+
+    // Calcular quantidade de veículos automaticamente
+    if (name === 'numeroPassageiros' && value) {
+      const passageiros = parseInt(value);
+      const veiculos = Math.ceil(passageiros / 38);
+      setFormData(prev => ({
+        ...prev,
+        numeroPassageiros: value,
+        quantidadeVeiculos: veiculos.toString()
+      }));
+    }
+
+    // Limpar erro do campo quando o usuário começar a digitar
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Campos obrigatórios
+    const requiredFields = [
+      'unidadeEscolar', 'nomeAtividade', 'localAtividade', 'horarioAtividade',
+      'dataAtividade', 'horarioEmbarqueIda', 'horarioEmbarqueVolta',
+      'enderecoEmbarque', 'cepEmbarque', 'enderecoDesembarque', 'cepDesembarque',
+      'quilometragem', 'numeroPassageiros', 'listaAnexada', 'acessibilidade',
+      'justificativaPedagogica'
+    ];
+
+    requiredFields.forEach(field => {
+      if (!formData[field]) {
+        newErrors[field] = 'Este campo é obrigatório';
+      }
+    });
+
+    // Validação da declaração
+    if (!formData.declaracaoCiente) {
+      newErrors.declaracaoCiente = 'Você deve estar ciente dos termos para prosseguir';
+    }
+
+    // Validação de data (deve ser futura e com pelo menos 15 dias de antecedência)
+    if (formData.dataAtividade) {
+      const dataAtividade = new Date(formData.dataAtividade);
+      const hoje = new Date();
+      const quinzeDias = new Date();
+      quinzeDias.setDate(hoje.getDate() + 15);
+
+      if (dataAtividade < quinzeDias) {
+        newErrors.dataAtividade = 'A data deve ter pelo menos 15 dias de antecedência';
+      }
+    }
+
+    // Validação de CEP
+    const cepRegex = /^\d{5}-?\d{3}$/;
+    if (formData.cepEmbarque && !cepRegex.test(formData.cepEmbarque)) {
+      newErrors.cepEmbarque = 'CEP deve ter o formato 00000-000';
+    }
+    if (formData.cepDesembarque && !cepRegex.test(formData.cepDesembarque)) {
+      newErrors.cepDesembarque = 'CEP deve ter o formato 00000-000';
+    }
+
+    // Validação de números
+    if (formData.numeroPassageiros && (isNaN(formData.numeroPassageiros) || parseInt(formData.numeroPassageiros) <= 0)) {
+      newErrors.numeroPassageiros = 'Número de passageiros deve ser um número positivo';
+    }
+
+    if (formData.quilometragem && (isNaN(formData.quilometragem) || parseFloat(formData.quilometragem) <= 0)) {
+      newErrors.quilometragem = 'Quilometragem deve ser um número positivo';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Simular envio
+    setTimeout(() => {
+      // Salvar dados no localStorage para a página de confirmação
+      localStorage.setItem('requerimentoData', JSON.stringify(formData));
+      navigate('/confirmacao');
+    }, 1000);
+  };
+
+  return (
+    <div style={{ padding: '48px 0' }}>
+      <div className="container">
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="card">
+            <h1 style={{ textAlign: 'center', marginBottom: '32px' }}>
+              Requerimento de Transporte Escolar para Atividade Extracurricular
+            </h1>
+
+            <form onSubmit={handleSubmit}>
+              {/* Dados da Atividade Extracurricular */}
+              <section style={{ marginBottom: '48px' }}>
+                <h2 style={{ 
+                  fontSize: '1.5rem', 
+                  marginBottom: '24px', 
+                  paddingBottom: '8px',
+                  borderBottom: '2px solid var(--blue-50)'
+                }}>
+                  Dados da Atividade Extracurricular
+                </h2>
+
+                <div className="form-group">
+                  <label htmlFor="unidadeEscolar" className="form-label">
+                    Unidade Escolar Solicitante *
+                  </label>
+                  <input
+                    type="text"
+                    id="unidadeEscolar"
+                    name="unidadeEscolar"
+                    value={formData.unidadeEscolar}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.unidadeEscolar ? 'error' : ''}`}
+                    placeholder="Ex: Centro de Ensino Fundamental 01 de Brasília"
+                  />
+                  {errors.unidadeEscolar && <div className="form-error">{errors.unidadeEscolar}</div>}
+                </div>
+
+                <div className="grid grid-2">
+                  <div className="form-group">
+                    <label htmlFor="nomeAtividade" className="form-label">
+                      Nome da Atividade *
+                    </label>
+                    <input
+                      type="text"
+                      id="nomeAtividade"
+                      name="nomeAtividade"
+                      value={formData.nomeAtividade}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.nomeAtividade ? 'error' : ''}`}
+                      placeholder="Ex: Visita ao Museu Nacional"
+                    />
+                    {errors.nomeAtividade && <div className="form-error">{errors.nomeAtividade}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="localAtividade" className="form-label">
+                      Nome do Local da Atividade *
+                    </label>
+                    <input
+                      type="text"
+                      id="localAtividade"
+                      name="localAtividade"
+                      value={formData.localAtividade}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.localAtividade ? 'error' : ''}`}
+                      placeholder="Ex: Museu Nacional de Brasília"
+                    />
+                    {errors.localAtividade && <div className="form-error">{errors.localAtividade}</div>}
+                  </div>
+                </div>
+
+                <div className="grid grid-2">
+                  <div className="form-group">
+                    <label htmlFor="dataAtividade" className="form-label">
+                      Data da Atividade *
+                    </label>
+                    <input
+                      type="date"
+                      id="dataAtividade"
+                      name="dataAtividade"
+                      value={formData.dataAtividade}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.dataAtividade ? 'error' : ''}`}
+                    />
+                    {errors.dataAtividade && <div className="form-error">{errors.dataAtividade}</div>}
+                    <div className="form-help">Mínimo de 15 dias de antecedência</div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="horarioAtividade" className="form-label">
+                      Horário da Atividade *
+                    </label>
+                    <input
+                      type="time"
+                      id="horarioAtividade"
+                      name="horarioAtividade"
+                      value={formData.horarioAtividade}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.horarioAtividade ? 'error' : ''}`}
+                    />
+                    {errors.horarioAtividade && <div className="form-error">{errors.horarioAtividade}</div>}
+                  </div>
+                </div>
+
+                <div className="grid grid-2">
+                  <div className="form-group">
+                    <label htmlFor="horarioEmbarqueIda" className="form-label">
+                      Horário de Embarque - IDA *
+                    </label>
+                    <input
+                      type="time"
+                      id="horarioEmbarqueIda"
+                      name="horarioEmbarqueIda"
+                      value={formData.horarioEmbarqueIda}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.horarioEmbarqueIda ? 'error' : ''}`}
+                    />
+                    {errors.horarioEmbarqueIda && <div className="form-error">{errors.horarioEmbarqueIda}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="horarioEmbarqueVolta" className="form-label">
+                      Horário de Embarque - VOLTA *
+                    </label>
+                    <input
+                      type="time"
+                      id="horarioEmbarqueVolta"
+                      name="horarioEmbarqueVolta"
+                      value={formData.horarioEmbarqueVolta}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.horarioEmbarqueVolta ? 'error' : ''}`}
+                    />
+                    {errors.horarioEmbarqueVolta && <div className="form-error">{errors.horarioEmbarqueVolta}</div>}
+                  </div>
+                </div>
+              </section>
+
+              {/* Informações de Transporte */}
+              <section style={{ marginBottom: '48px' }}>
+                <h2 style={{ 
+                  fontSize: '1.5rem', 
+                  marginBottom: '24px', 
+                  paddingBottom: '8px',
+                  borderBottom: '2px solid var(--blue-50)'
+                }}>
+                  Informações de Transporte
+                </h2>
+
+                <div className="form-group">
+                  <label htmlFor="enderecoEmbarque" className="form-label">
+                    Endereço de Embarque (origem) *
+                  </label>
+                  <input
+                    type="text"
+                    id="enderecoEmbarque"
+                    name="enderecoEmbarque"
+                    value={formData.enderecoEmbarque}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.enderecoEmbarque ? 'error' : ''}`}
+                    placeholder="Endereço completo do local de embarque"
+                  />
+                  {errors.enderecoEmbarque && <div className="form-error">{errors.enderecoEmbarque}</div>}
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="cepEmbarque" className="form-label">
+                    CEP do Embarque *
+                  </label>
+                  <input
+                    type="text"
+                    id="cepEmbarque"
+                    name="cepEmbarque"
+                    value={formData.cepEmbarque}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.cepEmbarque ? 'error' : ''}`}
+                    placeholder="00000-000"
+                    maxLength="9"
+                  />
+                  {errors.cepEmbarque && <div className="form-error">{errors.cepEmbarque}</div>}
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="enderecoDesembarque" className="form-label">
+                    Endereço de Desembarque (destino) *
+                  </label>
+                  <input
+                    type="text"
+                    id="enderecoDesembarque"
+                    name="enderecoDesembarque"
+                    value={formData.enderecoDesembarque}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.enderecoDesembarque ? 'error' : ''}`}
+                    placeholder="Endereço completo do local de desembarque"
+                  />
+                  {errors.enderecoDesembarque && <div className="form-error">{errors.enderecoDesembarque}</div>}
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="cepDesembarque" className="form-label">
+                    CEP do Desembarque *
+                  </label>
+                  <input
+                    type="text"
+                    id="cepDesembarque"
+                    name="cepDesembarque"
+                    value={formData.cepDesembarque}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.cepDesembarque ? 'error' : ''}`}
+                    placeholder="00000-000"
+                    maxLength="9"
+                  />
+                  {errors.cepDesembarque && <div className="form-error">{errors.cepDesembarque}</div>}
+                </div>
+
+                <div className="grid grid-2">
+                  <div className="form-group">
+                    <label htmlFor="quilometragem" className="form-label">
+                      Estimativa de Quilometragem (IDA E VOLTA) *
+                    </label>
+                    <input
+                      type="number"
+                      id="quilometragem"
+                      name="quilometragem"
+                      value={formData.quilometragem}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.quilometragem ? 'error' : ''}`}
+                      placeholder="Ex: 50"
+                      min="1"
+                      step="0.1"
+                    />
+                    {errors.quilometragem && <div className="form-error">{errors.quilometragem}</div>}
+                    <div className="form-help">Em quilômetros</div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="numeroPassageiros" className="form-label">
+                      Número Total de Passageiros *
+                    </label>
+                    <input
+                      type="number"
+                      id="numeroPassageiros"
+                      name="numeroPassageiros"
+                      value={formData.numeroPassageiros}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.numeroPassageiros ? 'error' : ''}`}
+                      placeholder="Ex: 35"
+                      min="1"
+                    />
+                    {errors.numeroPassageiros && <div className="form-error">{errors.numeroPassageiros}</div>}
+                  </div>
+                </div>
+
+                <div className="grid grid-2">
+                  <div className="form-group">
+                    <label htmlFor="listaAnexada" className="form-label">
+                      Lista Nominal dos Estudantes foi Anexada ao Processo? *
+                    </label>
+                    <select
+                      id="listaAnexada"
+                      name="listaAnexada"
+                      value={formData.listaAnexada}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.listaAnexada ? 'error' : ''}`}
+                    >
+                      <option value="">Selecione</option>
+                      <option value="sim">Sim</option>
+                      <option value="nao">Não</option>
+                    </select>
+                    {errors.listaAnexada && <div className="form-error">{errors.listaAnexada}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="quantidadeVeiculos" className="form-label">
+                      Quantidade de Veículos Necessários
+                    </label>
+                    <input
+                      type="number"
+                      id="quantidadeVeiculos"
+                      name="quantidadeVeiculos"
+                      value={formData.quantidadeVeiculos}
+                      readOnly
+                      className="form-input"
+                      style={{ backgroundColor: 'var(--gray-10)' }}
+                    />
+                    <div className="form-help">Calculado automaticamente (38 passageiros por veículo)</div>
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="acessibilidade" className="form-label">
+                    Necessidade de veículo com acessibilidade para pessoas com deficiência? *
+                  </label>
+                  <select
+                    id="acessibilidade"
+                    name="acessibilidade"
+                    value={formData.acessibilidade}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.acessibilidade ? 'error' : ''}`}
+                  >
+                    <option value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                  </select>
+                  {errors.acessibilidade && <div className="form-error">{errors.acessibilidade}</div>}
+                </div>
+              </section>
+
+              {/* Justificativa */}
+              <section style={{ marginBottom: '48px' }}>
+                <h2 style={{ 
+                  fontSize: '1.5rem', 
+                  marginBottom: '24px', 
+                  paddingBottom: '8px',
+                  borderBottom: '2px solid var(--blue-50)'
+                }}>
+                  Justificativa Pedagógica
+                </h2>
+
+                <div className="form-group">
+                  <label htmlFor="justificativaPedagogica" className="form-label">
+                    Justificativa Pedagógica (para análise da UNIEB) *
+                  </label>
+                  <textarea
+                    id="justificativaPedagogica"
+                    name="justificativaPedagogica"
+                    value={formData.justificativaPedagogica}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.justificativaPedagogica ? 'error' : ''}`}
+                    rows="6"
+                    placeholder="Descreva a justificativa pedagógica para a atividade extracurricular..."
+                  />
+                  {errors.justificativaPedagogica && <div className="form-error">{errors.justificativaPedagogica}</div>}
+                </div>
+              </section>
+
+              {/* Declaração */}
+              <section style={{ marginBottom: '32px' }}>
+                <div className="alert alert-info">
+                  <h3 style={{ marginBottom: '16px' }}>Declaração de Ciência</h3>
+                  <div style={{ marginBottom: '16px' }}>
+                    <label style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', cursor: 'pointer' }}>
+                      <input
+                        type="checkbox"
+                        name="declaracaoCiente"
+                        checked={formData.declaracaoCiente}
+                        onChange={handleInputChange}
+                        style={{ marginTop: '4px', flexShrink: 0 }}
+                      />
+                      <span>
+                        Declaro estar ciente dos termos acima e solicito serviço de transporte escolar para realização de atividade extracurricular conforme os dados informados.
+                      </span>
+                    </label>
+                    {errors.declaracaoCiente && <div className="form-error" style={{ marginTop: '8px' }}>{errors.declaracaoCiente}</div>}
+                  </div>
+                </div>
+              </section>
+
+              {/* Botões */}
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <button
+                  type="button"
+                  onClick={() => navigate('/')}
+                  className="btn btn-secondary"
+                  disabled={isSubmitting}
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={isSubmitting}
+                  style={{ minWidth: '200px' }}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span className="spinner"></span>
+                      Processando...
+                    </>
+                  ) : (
+                    'Gerar Requerimento'
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FormPage;
+
+// js/ui/modals.js
+
+export function showModal(title, content) {
+    const modal = document.getElementById("appModal");
+    const modalTitle = document.getElementById("appModalTitle");
+    const modalBody = document.getElementById("appModalBody");
+
+    if (modal && modalTitle && modalBody) {
+        modalTitle.textContent = title;
+        modalBody.innerHTML = content;
+        modal.classList.add("active");
+        document.body.classList.add("modal-open");
+
+        // Fechar modal ao clicar fora ou no botão de fechar
+        modal.querySelector(".modal-close").onclick = closeModal;
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    }
+}
+
+export function closeModal() {
+    const modal = document.getElementById("appModal");
+    if (modal) {
+        modal.classList.remove("active");
+        document.body.classList.remove("modal-open");
+    }
+}
+
+export function getNewStudentFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="studentName">Nome Completo:</label>
+                <input type="text" id="studentName" class="form-control" placeholder="Nome do Estudante" required>
+            </div>
+            <div class="form-group">
+                <label for="studentMatricula">Matrícula:</label>
+                <input type="text" id="studentMatricula" class="form-control" placeholder="Matrícula" required>
+            </div>
+            <div class="form-group">
+                <label for="studentSchool">Escola:</label>
+                <input type="text" id="studentSchool" class="form-control" placeholder="Escola" required>
+            </div>
+            <div class="form-group">
+                <label for="studentRoute">Rota:</label>
+                <input type="text" id="studentRoute" class="form-control" placeholder="Rota de Transporte">
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    `;
+}
+
+export function getNewRouteFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="routeName">Nome da Rota:</label>
+                <input type="text" id="routeName" class="form-control" placeholder="Ex: Rota Asa Norte" required>
+            </div>
+            <div class="form-group">
+                <label for="routeCapacity">Capacidade do Veículo:</label>
+                <input type="number" id="routeCapacity" class="form-control" placeholder="Ex: 38" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Criar Rota</button>
+        </form>
+    `;
+}
+
+export function getMaintenanceFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="vehicleId">ID do Veículo:</label>
+                <input type="text" id="vehicleId" class="form-control" placeholder="Ex: PCE001" required>
+            </div>
+            <div class="form-group">
+                <label for="maintenanceDate">Data da Manutenção:</label>
+                <input type="date" id="maintenanceDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="maintenanceType">Tipo de Manutenção:</label>
+                <select id="maintenanceType" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="preventiva">Preventiva</option>
+                    <option value="corretiva">Corretiva</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar</button>
+        </form>
+    `;
+}
+
+export function getReportFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="reportType">Tipo de Relatório:</label>
+                <select id="reportType" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="estudantes">Estudantes</option>
+                    <option value="frota">Frota</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="ocorrencias">Ocorrências</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reportPeriod">Período:</label>
+                <select id="reportPeriod" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="diario">Diário</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensal">Mensal</option>
+                    <option value="anual">Anual</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Gerar Relatório</button>
+        </form>
+    `;
+}
+
+export function getEmergencyFormHTML() {
+    return `
+        <form class="modal-form">
+            <div class="form-group">
+                <label for="emergencyVehicle">Veículo Envolvido:</label>
+                <input type="text" id="emergencyVehicle" class="form-control" placeholder="ID do Veículo" required>
+            </div>
+            <div class="form-group">
+                <label for="emergencyType">Tipo de Emergência:</label>
+                <select id="emergencyType" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="acidente">Acidente</option>
+                    <option value="pane">Pane Mecânica</option>
+                    <option value="saude">Problema de Saúde</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="emergencyDescription">Descrição:</label>
+                <textarea id="emergencyDescription" class="form-control" rows="3" placeholder="Detalhes da ocorrência"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Registrar Emergência</button>
+        </form>
+    `;
+}
+
+
+// js/ui/dashboard.js
+import { appState, updateAppState } from "../state.js";
+
+export function setupCounters() {
+    const counters = document.querySelectorAll("[data-counter]");
+
+    const animateCounter = (element) => {
+        const target = parseInt(element.getAttribute("data-counter"));
+        const duration = 2000; // 2 segundos
+        const increment = target / (duration / 16); // 60 FPS
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.floor(current).toLocaleString("pt-BR");
+        }, 16);
+    };
+
+    // Observador de interseção para animar quando visível
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !entry.target.classList.contains("animated")) {
+                entry.target.classList.add("animated");
+                animateCounter(entry.target);
+            }
+        });
+    });
+
+    counters.forEach((counter) => observer.observe(counter));
+}
+
+export function setupRealTimeUpdates() {
+    updateLastUpdateTime();
+    setInterval(updateLastUpdateTime, 60000); // Atualizar a cada minuto
+}
+
+export function updateLastUpdateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString("pt-BR", {
+        hour: "2-digit",
+        minute: "2-digit",
+    });
+
+    const lastUpdateElement = document.getElementById("lastUpdate");
+    if (lastUpdateElement) {
+        lastUpdateElement.textContent = timeString;
+    }
+
+    updateAppState({ lastUpdate: now });
+}
+
+export function refreshDashboardData() {
+    // Simular atualização de dados do dashboard
+    console.log("Atualizando dados do dashboard...");
+    // Aqui seria a lógica para buscar novos dados e atualizar os KPIs
+}
+
+
+/* Design System Gov.br - Cores e Estilos */
+:root {
+  /* Cores Primárias */
+  --blue-50: #1351B4;
+  --blue-60: #0C326F;
+  --blue-40: #4A90E2;
+  
+  /* Cores de Estado */
+  --red-vivid-50: #E52207;
+  --orange-vivid-20: #FFCD07;
+  --green-50: #168821;
+  
+  /* Cores Neutras */
+  --gray-0: #FFFFFF;
+  --gray-5: #F8F9FA;
+  --gray-10: #E9ECEF;
+  --gray-30: #ADB5BD;
+  --gray-60: #6C757D;
+  --gray-90: #212529;
+  --gray-100: #000000;
+  
+  /* Tipografia */
+  --font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 16px;
+  --font-size-base-mobile: 14px;
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  
+  /* Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Bordas */
+  --border-radius: 4px;
+  --border-radius-lg: 8px;
+}
+
+/* Reset e Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-text);
+  color: var(--gray-90);
+  background-color: var(--gray-5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--font-size-base-mobile);
+  }
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-heading);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--blue-60);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--blue-60);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--gray-90);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Header */
+.header {
+  background-color: var(--blue-60);
+  color: var(--gray-0);
+}
+
+.gov-bar {
+  background-color: var(--blue-50);
+  padding: var(--spacing-sm) 0;
+  font-size: 14px;
+}
+
+.gov-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gov-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.gov-links a {
+  color: var(--gray-0);
+  text-decoration: none;
+}
+
+.header-main {
+  padding: var(--spacing-md) 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background-color: var(--gray-0);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.brand-text h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--gray-0);
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--gray-0);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main */
+.main {
+  flex: 1;
+}
+
+/* Pages */
+.page {
+  display: none;
+  padding: var(--spacing-2xl) 0;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--gray-0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hero-icon {
+  font-size: 64px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--blue-60);
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--gray-60);
+  line-height: 1.6;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.btn-primary {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-60);
+}
+
+.btn-secondary {
+  background-color: var(--gray-0);
+  color: var(--blue-50);
+  border: 2px solid var(--blue-50);
+}
+
+.btn-secondary:hover {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}
+
+.btn-large {
+  font-size: 1.125rem;
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 64px;
+}
+
+.info-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.info-card {
+  background-color: var(--gray-0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.info-icon {
+  font-size: 32px;
+  padding: 12px;
+  border-radius: var(--border-radius-lg);
+  flex-shrink: 0;
+}
+
+.info-icon.warning {
+  background-color: var(--orange-vivid-20);
+}
+
+.info-icon.primary {
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+}
+
+.info-icon.success {
+  background-color: var(--green-50);
+  color: var(--gray-0);
+}
+
+.info-icon.neutral {
+  background-color: var(--gray-60);
+  color: var(--gray-0);
+}
+
+.info-content h3 {
+  color: var(--gray-90);
+  margin-bottom: 12px;
+}
+
+.info-content p {
+  margin: 0;
+  color: var(--gray-60);
+}
+
+/* Alert Section */
+.alert-section {
+  margin-bottom: 64px;
+}
+
+.alert {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid;
+}
+
+.alert-info {
+  background-color: #E3F2FD;
+  border-color: var(--blue-50);
+  color: var(--blue-60);
+}
+
+.alert-success {
+  background-color: #E8F5E8;
+  border-color: var(--green-50);
+  color: #2E7D32;
+}
+
+.alert-warning {
+  background-color: #FFF8E1;
+  border-color: var(--orange-vivid-20);
+  color: #F57C00;
+}
+
+.alert-error {
+  background-color: #FFEBEE;
+  border-color: var(--red-vivid-50);
+  color: #C62828;
+}
+
+.alert-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.alert-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.alert h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.125rem;
+}
+
+.alert p {
+  margin: 0;
+}
+
+/* Steps Section */
+.steps-section {
+  margin-bottom: 64px;
+}
+
+.steps-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  background-color: var(--blue-50);
+  color: var(--gray-0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto 16px auto;
+}
+
+.step h3 {
+  margin-bottom: 12px;
+}
+
+.step p {
+  color: var(--gray-60);
+  margin: 0;
+}
+
+/* Form */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--gray-0);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.card h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--blue-50);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--gray-90);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--gray-30);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--gray-0);
+  transition: border-color 0.2s ease;
+  min-height: 44px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue-50);
+  box-shadow: 0 0 0 3px rgba(19, 81, 180, 0.1);
+}
+
+.form-input.error {
+  border-color: var(--red-vivid-50);
+}
+
+.form-input[readonly] {
+  background-color: var(--gray-10);
+}
+
+.form-error {
+  color: var(--red-vivid-50);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+  display: none;
+}
+
+.form-error.show {
+  display: block;
+}
+
+.form-help {
+  color: var(--gray-60);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.checkbox-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-submit {
+  min-width: 200px;
+}
+
+.btn-loading {
+  display: none;
+}
+
+.btn-submit.loading .btn-text {
+  display: none;
+}
+
+.btn-submit.loading .btn-loading {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Success Banner */
+.success-banner {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-md);
+}
+
+.success-banner h1 {
+  margin: 0 0 16px 0;
+  color: #2E7D32;
+}
+
+.success-banner p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+/* Actions Section */
+.actions-section {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+/* Help Page */
+.help-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.faq-item {
+  margin-bottom: var(--spacing-lg);
+}
+
+.faq-item h3 {
+  color: var(--blue-60);
+  margin-bottom: var(--spacing-sm);
+}
+
+.faq-item p {
+  margin: 0;
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--blue-50);
+}
+
+.contact-info {
+  background-color: var(--gray-5);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
+  color: var(--gray-60);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--gray-90);
+  color: var(--gray-0);
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl) 0;
+}
+
+.footer-section h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--gray-0);
+}
+
+.footer-section p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section a {
+  color: var(--gray-30);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid var(--gray-60);
+  margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  font-size: 0.875rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--gray-30);
+}
+
+.footer-meta {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.footer-meta span {
+  color: var(--gray-30);
+}
+
+/* Spinner */
+.spinner {
+  border: 2px solid var(--gray-30);
+  border-top: 2px solid var(--blue-50);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .card {
+    padding: var(--spacing-md);
+  }
+  
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav ul {
+    justify-content: center;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .actions-section {
+    flex-direction: column;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible para navegação por teclado */
+.btn:focus-visible,
+.form-input:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--blue-50);
+  outline-offset: 2px;
+}
+
+// Sistema de Atividades Extracurriculares - SEDF
+// JavaScript para funcionalidades do sistema
+
+// Estado global da aplicação
+let currentFormData = {};
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', function() {
+    initializeApp();
+});
+
+function initializeApp() {
+    // Configurar navegação
+    setupNavigation();
+    
+    // Configurar formulário
+    setupForm();
+    
+    // Configurar validações em tempo real
+    setupRealTimeValidation();
+    
+    // Verificar se há dados salvos para mostrar confirmação
+    checkSavedData();
+}
+
+// Navegação entre páginas
+function setupNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const page = this.getAttribute('data-page');
+            showPage(page);
+        });
+    });
+}
+
+function showPage(pageId) {
+    // Esconder todas as páginas
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+    
+    // Mostrar página selecionada
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+    }
+    
+    // Atualizar navegação ativa
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => link.classList.remove('active'));
+    
+    const activeLink = document.querySelector(`[data-page="${pageId}"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+    
+    // Rolar para o topo
+    window.scrollTo(0, 0);
+    
+    // Se for a página de confirmação, carregar dados
+    if (pageId === 'confirmacao') {
+        loadConfirmationData();
+    }
+}
+
+// Configuração do formulário
+function setupForm() {
+    const form = document.getElementById('requerimentoForm');
+    if (form) {
+        form.addEventListener('submit', handleFormSubmit);
+    }
+    
+    // Configurar cálculo automático de veículos
+    const numeroPassageiros = document.getElementById('numeroPassageiros');
+    if (numeroPassageiros) {
+        numeroPassageiros.addEventListener('input', calculateVehicles);
+    }
+    
+    // Configurar formatação de CEP
+    const cepInputs = document.querySelectorAll('input[name="cepEmbarque"], input[name="cepDesembarque"]');
+    cepInputs.forEach(input => {
+        input.addEventListener('input', formatCEP);
+    });
+}
+
+// Validações em tempo real
+function setupRealTimeValidation() {
+    const inputs = document.querySelectorAll('.form-input');
+    
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validateField(this);
+        });
+        
+        input.addEventListener('input', function() {
+            clearFieldError(this);
+        });
+    });
+}
+
+// Calcular quantidade de veículos
+function calculateVehicles() {
+    const numeroPassageiros = document.getElementById('numeroPassageiros');
+    const quantidadeVeiculos = document.getElementById('quantidadeVeiculos');
+    
+    if (numeroPassageiros && quantidadeVeiculos) {
+        const passageiros = parseInt(numeroPassageiros.value) || 0;
+        const veiculos = passageiros > 0 ? Math.ceil(passageiros / 38) : 0;
+        quantidadeVeiculos.value = veiculos;
+    }
+}
+
+// Formatação de CEP
+function formatCEP(event) {
+    let value = event.target.value.replace(/\D/g, '');
+    
+    if (value.length > 5) {
+        value = value.substring(0, 5) + '-' + value.substring(5, 8);
+    }
+    
+    event.target.value = value;
+}
+
+// Validação de campo individual
+function validateField(field) {
+    const fieldName = field.name;
+    const value = field.value.trim();
+    let isValid = true;
+    let errorMessage = '';
+    
+    // Campos obrigatórios
+    if (field.hasAttribute('required') && !value) {
+        isValid = false;
+        errorMessage = 'Este campo é obrigatório';
+    }
+    
+    // Validações específicas
+    if (value) {
+        switch (fieldName) {
+            case 'dataAtividade':
+                const dataAtividade = new Date(value);
+                const hoje = new Date();
+                const quinzeDias = new Date();
+                quinzeDias.setDate(hoje.getDate() + 15);
+                
+                if (dataAtividade < quinzeDias) {
+                    isValid = false;
+                    errorMessage = 'A data deve ter pelo menos 15 dias de antecedência';
+                }
+                break;
+                
+            case 'cepEmbarque':
+            case 'cepDesembarque':
+                const cepRegex = /^\d{5}-?\d{3}$/;
+                if (!cepRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'CEP deve ter o formato 00000-000';
+                }
+                break;
+                
+            case 'numeroPassageiros':
+                if (isNaN(value) || parseInt(value) <= 0) {
+                    isValid = false;
+                    errorMessage = 'Número de passageiros deve ser um número positivo';
+                }
+                break;
+                
+            case 'quilometragem':
+                if (isNaN(value) || parseFloat(value) <= 0) {
+                    isValid = false;
+                    errorMessage = 'Quilometragem deve ser um número positivo';
+                }
+                break;
+        }
+    }
+    
+    // Mostrar/esconder erro
+    showFieldError(field, isValid, errorMessage);
+    
+    return isValid;
+}
+
+// Mostrar erro do campo
+function showFieldError(field, isValid, errorMessage) {
+    const errorElement = field.parentNode.querySelector('.form-error');
+    
+    if (isValid) {
+        field.classList.remove('error');
+        if (errorElement) {
+            errorElement.textContent = '';
+            errorElement.classList.remove('show');
+        }
+    } else {
+        field.classList.add('error');
+        if (errorElement) {
+            errorElement.textContent = errorMessage;
+            errorElement.classList.add('show');
+        }
+    }
+}
+
+// Limpar erro do campo
+function clearFieldError(field) {
+    field.classList.remove('error');
+    const errorElement = field.parentNode.querySelector('.form-error');
+    if (errorElement) {
+        errorElement.textContent = '';
+        errorElement.classList.remove('show');
+    }
+}
+
+// Validação completa do formulário
+function validateForm() {
+    const form = document.getElementById('requerimentoForm');
+    const inputs = form.querySelectorAll('.form-input[required]');
+    const checkbox = form.querySelector('#declaracaoCiente');
+    
+    let isValid = true;
+    
+    // Validar todos os campos obrigatórios
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            isValid = false;
+        }
+    });
+    
+    // Validar checkbox de declaração
+    if (!checkbox.checked) {
+        isValid = false;
+        const errorElement = checkbox.parentNode.querySelector('.form-error');
+        if (errorElement) {
+            errorElement.textContent = 'Você deve estar ciente dos termos para prosseguir';
+            errorElement.classList.add('show');
+        }
+    }
+    
+    return isValid;
+}
+
+// Submissão do formulário
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    if (!validateForm()) {
+        // Rolar para o primeiro erro
+        const firstError = document.querySelector('.form-input.error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+    }
+    
+    // Mostrar loading
+    const submitBtn = document.querySelector('.btn-submit');
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    
+    // Coletar dados do formulário
+    const formData = new FormData(event.target);
+    const data = {};
+    
+    for (let [key, value] of formData.entries()) {
+        data[key] = value;
+    }
+    
+    // Adicionar checkbox separadamente
+    data.declaracaoCiente = document.getElementById('declaracaoCiente').checked;
+    
+    // Simular processamento
+    setTimeout(() => {
+        // Salvar dados
+        currentFormData = data;
+        localStorage.setItem('requerimentoData', JSON.stringify(data));
+        
+        // Remover loading
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        
+        // Ir para página de confirmação
+        showPage('confirmacao');
+    }, 1000);
+}
+
+// Verificar dados salvos
+function checkSavedData() {
+    const savedData = localStorage.getItem('requerimentoData');
+    if (savedData) {
+        currentFormData = JSON.parse(savedData);
+    }
+}
+
+// Carregar dados na página de confirmação
+function loadConfirmationData() {
+    const savedData = localStorage.getItem('requerimentoData');
+    if (!savedData) {
+        showPage('formulario');
+        return;
+    }
+    
+    const data = JSON.parse(savedData);
+    const resumoContent = document.getElementById('resumoContent');
+    
+    if (resumoContent) {
+        resumoContent.innerHTML = generateResumoHTML(data);
+    }
+}
+
+// Gerar HTML do resumo
+function generateResumoHTML(data) {
+    return `
+        <section style="margin-bottom: 32px;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--gray-30);">
+                Dados da Atividade Extracurricular
+            </h3>
+            
+            <div style="display: grid; gap: 12px;">
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Unidade Escolar:</strong>
+                    <span>${data.unidadeEscolar || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Nome da Atividade:</strong>
+                    <span>${data.nomeAtividade || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Local da Atividade:</strong>
+                    <span>${data.localAtividade || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Data da Atividade:</strong>
+                    <span>${formatDate(data.dataAtividade) || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Horário da Atividade:</strong>
+                    <span>${data.horarioAtividade || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Embarque - IDA:</strong>
+                    <span>${data.horarioEmbarqueIda || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Embarque - VOLTA:</strong>
+                    <span>${data.horarioEmbarqueVolta || ''}</span>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 32px;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--gray-30);">
+                Informações de Transporte
+            </h3>
+            
+            <div style="display: grid; gap: 12px;">
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Endereço Embarque:</strong>
+                    <span>${data.enderecoEmbarque || ''}, CEP: ${data.cepEmbarque || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Endereço Desembarque:</strong>
+                    <span>${data.enderecoDesembarque || ''}, CEP: ${data.cepDesembarque || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Quilometragem:</strong>
+                    <span>${data.quilometragem || ''} km (ida e volta)</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Nº de Passageiros:</strong>
+                    <span>${data.numeroPassageiros || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Veículos Necessários:</strong>
+                    <span>${data.quantidadeVeiculos || ''}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Lista Anexada:</strong>
+                    <span>${data.listaAnexada === 'sim' ? 'Sim' : 'Não'}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: start;">
+                    <strong>Acessibilidade:</strong>
+                    <span>${data.acessibilidade === 'sim' ? 'Sim' : 'Não'}</span>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 32px;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--gray-30);">
+                Justificativa Pedagógica
+            </h3>
+            <p style="background-color: var(--gray-5); padding: 16px; border-radius: 4px; margin: 0; line-height: 1.6;">
+                ${data.justificativaPedagogica || ''}
+            </p>
+        </section>
+    `;
+}
+
+// Formatação de data
+function formatDate(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('pt-BR');
+}
+
+// Download do requerimento
+function downloadRequerimento() {
+    const savedData = localStorage.getItem('requerimentoData');
+    if (!savedData) return;
+    
+    const data = JSON.parse(savedData);
+    
+    const content = `REQUERIMENTO DE TRANSPORTE ESCOLAR PARA ATIVIDADE EXTRACURRICULAR
+
+DADOS DA ATIVIDADE EXTRACURRICULAR
+Unidade Escolar Solicitante: ${data.unidadeEscolar}
+Nome da Atividade: ${data.nomeAtividade}
+Nome do Local da Atividade: ${data.localAtividade}
+Horário da Atividade: ${data.horarioAtividade}
+Data da Atividade: ${formatDate(data.dataAtividade)}
+Horário de Embarque na IDA: ${data.horarioEmbarqueIda}
+Horário de Embarque na VOLTA: ${data.horarioEmbarqueVolta}
+
+INFORMAÇÕES DE TRANSPORTE
+Endereço (com CEP) de Embarque (origem): ${data.enderecoEmbarque}, CEP: ${data.cepEmbarque}
+Endereço (com CEP) de Desembarque (destino): ${data.enderecoDesembarque}, CEP: ${data.cepDesembarque}
+Estimativa de Quilometragem do Trajeto (IDA E VOLTA): ${data.quilometragem}km
+Número Total de Passageiros: ${data.numeroPassageiros}
+Lista Nominal e Numerada dos Estudantes Autorizados a Participar foi Anexada ao Processo: ${data.listaAnexada === 'sim' ? 'Sim' : 'Não'}
+Quantidade de Veículos Necessários (38 passageiros por veículo): ${data.quantidadeVeiculos} veículos
+Necessidade de veículo coletivo com acessibilidade para pessoas com deficiência ou mobilidade reduzida: ${data.acessibilidade === 'sim' ? 'Sim' : 'Não'}
+
+JUSTIFICATIVA PEDAGÓGICA (para análise da UNIEB):
+${data.justificativaPedagogica}
+
+OBSERVAÇÕES IMPORTANTES:
+1) Preencher um requerimento por turno e/ou dia (dentro do mesmo processo quando se tratar da mesma atividade).
+2) Solicitações de serviço de transporte escolar para atividades extracurriculares devem ser encaminhadas à UNIAE, via SEI, com antecedência mínima de 15 (quinze) dias em relação à data do evento.
+3) O número de veículos necessários deverá considerar apenas os estudantes autorizados a irem ao evento.
+4) O envio da lista nominal e numerada dos estudantes que utilizarão o transporte é obrigatório.
+5) Em razão da frota utilizada para atividades extracurriculares ser a mesma que atende aos itinerários regulares casa-escola-casa, o serviço de transporte escolar para atividades extracurriculares será ofertado exclusivamente nos horários a seguir: das 9h (saída da escola) às 11h (retorno à escola) no turno matutino e das 14h (saída da escola) às 16h (retorno à escola) no turno vespertino, não havendo, portanto, oferta de serviço de transporte escolar para atividades extracurriculares no período integral (manhã e tarde) e/ou no turno noturno.
+6) Em atendimento à Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018), os processos de solicitação de transporte escolar devem ser gerados com nível de acesso RESTRITO.
+7) Eventuais cancelamentos devem ser comunicados à UNIAE, via SEI, com antecedência mínima de 48 (quarenta e oito) horas, a fim de que a empresa responsável pela gestão do transporte seja comunicada a tempo.
+
+ATENÇÃO, GESTOR! O deslocamento desnecessário do veículo (sem o cancelamento prévio da UE) gera despesa pública que poderá configurar dano ao erário, com possível responsabilização por ato comissivo ou omissivo, conforme art. 183 da Lei Complementar nº 840 de 23/12/2011.
+
+Declaro estar ciente dos termos acima e solicito serviço de transporte escolar para realização de atividade extracurricular conforme os dados informados.
+
+Gerado em: ${new Date().toLocaleString('pt-BR')}
+Sistema de Atividades Extracurriculares - SEDF`;
+
+    // Criar e baixar arquivo
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `requerimento-transporte-${data.nomeAtividade.replace(/[^a-zA-Z0-9]/g, '-')}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+}
+
+// Funções utilitárias globais
+window.showPage = showPage;
+window.downloadRequerimento = downloadRequerimento;
+
+// js/utils/utils.js
+
+export function debounce(func, delay) {
+    let timeout;
+    return function(...args) {
+        const context = this;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+}
+
+export function showSearchResults(query) {
+    console.log(`Exibindo resultados para: ${query}`);
+    // Lógica para exibir resultados da busca
+}
+
+export function loadStudentsData() {
+    console.log("Carregando dados de estudantes...");
+    // Lógica para carregar dados reais de estudantes
+}
+
+export function loadFleetData() {
+    console.log("Carregando dados da frota...");
+    // Lógica para carregar dados reais da frota
+}
+
+export function loadFinancialData() {
+    console.log("Carregando dados financeiros...");
+    // Lógica para carregar dados reais financeiros
+}
+
+export function loadReportsData() {
+    console.log("Carregando dados de relatórios...");
+    // Lógica para carregar dados reais de relatórios
+}
+
+export function setupTooltips() {
+    console.log("Configurando tooltips...");
+    // Lógica para configurar tooltips
+}
+
+
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+const Header = () => {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+  return (
+    <header style={{ backgroundColor: 'var(--blue-60)', color: 'var(--gray-0)' }}>
+      {/* Barra superior do Gov.br */}
+      <div style={{ backgroundColor: 'var(--blue-50)', padding: '8px 0', fontSize: '14px' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <span>🇧🇷</span>
+              <span>Governo Federal</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <a 
+                href="https://www.gov.br" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'var(--gray-0)', textDecoration: 'none' }}
+              >
+                Portal Gov.br
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Header principal */}
+      <div style={{ padding: '16px 0' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+            {/* Logo e título */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div 
+                style={{ 
+                  width: '48px', 
+                  height: '48px', 
+                  backgroundColor: 'var(--gray-0)', 
+                  borderRadius: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '24px'
+                }}
+              >
+                🚌
+              </div>
+              <div>
+                <h1 style={{ fontSize: '1.5rem', margin: '0', fontWeight: '600' }}>
+                  Atividades Extracurriculares
+                </h1>
+                <p style={{ margin: '0', fontSize: '0.875rem', opacity: '0.9' }}>
+                  Secretaria de Estado de Educação do Distrito Federal
+                </p>
+              </div>
+            </div>
+
+            {/* Navegação */}
+            <nav>
+              <ul style={{ 
+                display: 'flex', 
+                listStyle: 'none', 
+                gap: '24px', 
+                margin: '0', 
+                padding: '0',
+                flexWrap: 'wrap'
+              }}>
+                <li>
+                  <Link 
+                    to="/" 
+                    style={{ 
+                      color: 'var(--gray-0)', 
+                      textDecoration: 'none',
+                      padding: '8px 16px',
+                      borderRadius: '4px',
+                      backgroundColor: isActive('/') ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                      transition: 'background-color 0.2s ease'
+                    }}
+                  >
+                    Início
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/formulario" 
+                    style={{ 
+                      color: 'var(--gray-0)', 
+                      textDecoration: 'none',
+                      padding: '8px 16px',
+                      borderRadius: '4px',
+                      backgroundColor: isActive('/formulario') ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                      transition: 'background-color 0.2s ease'
+                    }}
+                  >
+                    Novo Requerimento
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/ajuda" 
+                    style={{ 
+                      color: 'var(--gray-0)', 
+                      textDecoration: 'none',
+                      padding: '8px 16px',
+                      borderRadius: '4px',
+                      backgroundColor: isActive('/ajuda') ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                      transition: 'background-color 0.2s ease'
+                    }}
+                  >
+                    Ajuda
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+// js/ui/charts.js
+
+export function setupCharts() {
+    // Simular gráficos com Canvas
+    const occupancyChart = document.getElementById("occupancyChart");
+    const costsChart = document.getElementById("costsChart");
+
+    if (occupancyChart) {
+        drawOccupancyChart(occupancyChart);
+    }
+
+    if (costsChart) {
+        drawCostsChart(costsChart);
+    }
+}
+
+export function drawOccupancyChart(canvas) {
+    const ctx = canvas.getContext("2d");
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    // Dados simulados
+    const data = [65, 78, 82, 91, 87, 76, 69, 84, 88, 92, 85, 79];
+    const labels = [
+        "06:00",
+        "07:00",
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+    ];
+
+    // Configurações
+    const padding = 40;
+    const chartWidth = canvas.width - padding * 2;
+    const chartHeight = canvas.height - padding * 2;
+    const maxValue = Math.max(...data);
+
+    // Limpar canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Desenhar grade
+    ctx.strokeStyle = "#E9ECEF";
+    ctx.lineWidth = 1;
+
+    // Linhas horizontais
+    for (let i = 0; i <= 5; i++) {
+        const y = padding + (chartHeight / 5) * i;
+        ctx.beginPath();
+        ctx.moveTo(padding, y);
+        ctx.lineTo(canvas.width - padding, y);
+        ctx.stroke();
+    }
+
+    // Desenhar linha do gráfico
+    ctx.strokeStyle = "#1351B4";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+
+    data.forEach((value, index) => {
+        const x = padding + (chartWidth / (data.length - 1)) * index;
+        const y = padding + chartHeight - (value / maxValue) * chartHeight;
+
+        if (index === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+    });
+
+    ctx.stroke();
+
+    // Desenhar pontos
+    ctx.fillStyle = "#1351B4";
+    data.forEach((value, index) => {
+        const x = padding + (chartWidth / (data.length - 1)) * index;
+        const y = padding + chartHeight - (value / maxValue) * chartHeight;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    // Adicionar texto de exemplo
+    ctx.fillStyle = "#6C757D";
+    ctx.font = "12px Noto Sans";
+    ctx.textAlign = "center";
+    ctx.fillText("Gráfico de Ocupação por Horário", canvas.width / 2, 20);
+}
+
+export function drawCostsChart(canvas) {
+    const ctx = canvas.getContext("2d");
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    // Dados simulados para gráfico de pizza
+    const data = [
+        { label: "Combustível", value: 45, color: "#1351B4" },
+        { label: "Manutenção", value: 25, color: "#4A90E2" },
+        { label: "Pessoal", value: 20, color: "#168821" },
+        { label: "Outros", value: 10, color: "#FFCD07" },
+    ];
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = Math.min(centerX, centerY) - 40;
+
+    let currentAngle = -Math.PI / 2;
+
+    data.forEach((item) => {
+        const sliceAngle = (item.value / 100) * Math.PI * 2;
+
+        // Desenhar fatia
+        ctx.fillStyle = item.color;
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, currentAngle, currentAngle + sliceAngle);
+        ctx.closePath();
+        ctx.fill();
+
+        currentAngle += sliceAngle;
+    });
+
+    // Adicionar texto de exemplo
+    ctx.fillStyle = "#6C757D";
+    ctx.font = "12px Noto Sans";
+    ctx.textAlign = "center";
+    ctx.fillText("Distribuição de Custos", centerX, centerY + radius + 20);
+
+    // Adicionar legenda
+    let legendX = centerX + radius + 20;
+    let legendY = centerY - radius;
+    data.forEach((item, index) => {
+        ctx.fillStyle = item.color;
+        ctx.fillRect(legendX, legendY + index * 20, 10, 10);
+        ctx.fillStyle = "#333";
+        ctx.textAlign = "left";
+        ctx.fillText(`${item.label} (${item.value}%)`, legendX + 15, legendY + index * 20 + 9);
+    });
+}
+
+
+{
+  "name": "atividades-extracurriculares-sedf",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "@radix-ui/react-accordion": "^1.2.10",
+    "@radix-ui/react-alert-dialog": "^1.1.13",
+    "@radix-ui/react-aspect-ratio": "^1.1.6",
+    "@radix-ui/react-avatar": "^1.1.9",
+    "@radix-ui/react-checkbox": "^1.3.1",
+    "@radix-ui/react-collapsible": "^1.1.10",
+    "@radix-ui/react-context-menu": "^2.2.14",
+    "@radix-ui/react-dialog": "^1.1.13",
+    "@radix-ui/react-dropdown-menu": "^2.1.14",
+    "@radix-ui/react-hover-card": "^1.1.13",
+    "@radix-ui/react-label": "^2.1.6",
+    "@radix-ui/react-menubar": "^1.1.14",
+    "@radix-ui/react-navigation-menu": "^1.2.12",
+    "@radix-ui/react-popover": "^1.1.13",
+    "@radix-ui/react-progress": "^1.1.6",
+    "@radix-ui/react-radio-group": "^1.3.6",
+    "@radix-ui/react-scroll-area": "^1.2.8",
+    "@radix-ui/react-select": "^2.2.4",
+    "@radix-ui/react-separator": "^1.1.6",
+    "@radix-ui/react-slider": "^1.3.4",
+    "@radix-ui/react-slot": "^1.2.2",
+    "@radix-ui/react-switch": "^1.2.4",
+    "@radix-ui/react-tabs": "^1.1.11",
+    "@radix-ui/react-toggle": "^1.1.8",
+    "@radix-ui/react-toggle-group": "^1.1.9",
+    "@radix-ui/react-tooltip": "^1.2.6",
+    "@tailwindcss/vite": "^4.1.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.15.0",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.510.0",
+    "next-themes": "^0.4.6",
+    "react": "^19.1.0",
+    "react-day-picker": "8.10.1",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.56.3",
+    "react-resizable-panels": "^3.0.2",
+    "react-router-dom": "^7.6.1",
+    "recharts": "^2.15.3",
+    "sonner": "^2.0.3",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "tw-animate-css": "^1.2.9",
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+}
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import FormPage from './pages/FormPage';
+import ConfirmationPage from './pages/ConfirmationPage';
+import HelpPage from './pages/HelpPage';
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/formulario" element={<FormPage />} />
+            <Route path="/confirmacao" element={<ConfirmationPage />} />
+            <Route path="/ajuda" element={<HelpPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema de Requerimento de Transporte Escolar para Atividades Extracurriculares da SEDF - Secretaria de Estado de Educação do Distrito Federal" />
+    <meta name="keywords" content="SEDF, transporte escolar, atividades extracurriculares, requerimento, educação, Distrito Federal" />
+    <meta name="author" content="SEDF - Secretaria de Estado de Educação do Distrito Federal" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sistema de Atividades Extracurriculares - SEDF" />
+    <meta property="og:description" content="Facilite a solicitação de transporte escolar para atividades extracurriculares das unidades de ensino da SEDF" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Sistema de Atividades Extracurriculares - SEDF" />
+    <meta property="twitter:description" content="Facilite a solicitação de transporte escolar para atividades extracurriculares das unidades de ensino da SEDF" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <title>Sistema de Atividades Extracurriculares - SEDF</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+// js/app.js
+import { initializeApp } from './main.js';
+
+document.addEventListener('DOMContentLoaded', initializeApp);
+
+
+import React from 'react';
+
+const Footer = () => {
+  return (
+    <footer style={{ backgroundColor: 'var(--gray-90)', color: 'var(--gray-0)', marginTop: 'auto' }}>
+      <div style={{ padding: '32px 0' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '32px' }}>
+            {/* Informações da SEDF */}
+            <div>
+              <h3 style={{ fontSize: '1.125rem', marginBottom: '16px', color: 'var(--gray-0)' }}>
+                SEDF
+              </h3>
+              <p style={{ fontSize: '0.875rem', lineHeight: '1.5', margin: '0 0 8px 0' }}>
+                Secretaria de Estado de Educação do Distrito Federal
+              </p>
+              <p style={{ fontSize: '0.875rem', lineHeight: '1.5', margin: '0' }}>
+                Sistema de Requerimento de Transporte Escolar para Atividades Extracurriculares
+              </p>
+            </div>
+
+            {/* Links úteis */}
+            <div>
+              <h3 style={{ fontSize: '1.125rem', marginBottom: '16px', color: 'var(--gray-0)' }}>
+                Links Úteis
+              </h3>
+              <ul style={{ listStyle: 'none', padding: '0', margin: '0' }}>
+                <li style={{ marginBottom: '8px' }}>
+                  <a 
+                    href="https://www.educacao.df.gov.br" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--gray-30)', textDecoration: 'none', fontSize: '0.875rem' }}
+                  >
+                    Portal da SEDF
+                  </a>
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <a 
+                    href="https://www.gov.br" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--gray-30)', textDecoration: 'none', fontSize: '0.875rem' }}
+                  >
+                    Portal Gov.br
+                  </a>
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <a 
+                    href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--gray-30)', textDecoration: 'none', fontSize: '0.875rem' }}
+                  >
+                    LGPD - Lei Geral de Proteção de Dados
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contato */}
+            <div>
+              <h3 style={{ fontSize: '1.125rem', marginBottom: '16px', color: 'var(--gray-0)' }}>
+                Contato
+              </h3>
+              <p style={{ fontSize: '0.875rem', lineHeight: '1.5', margin: '0 0 8px 0' }}>
+                Para dúvidas sobre o sistema, entre em contato com a UNIAE via SEI.
+              </p>
+              <p style={{ fontSize: '0.875rem', lineHeight: '1.5', margin: '0' }}>
+                Lembre-se: solicitações devem ser feitas com antecedência mínima de 15 dias.
+              </p>
+            </div>
+          </div>
+
+          {/* Linha divisória */}
+          <hr style={{ 
+            border: 'none', 
+            borderTop: '1px solid var(--gray-60)', 
+            margin: '32px 0 24px 0' 
+          }} />
+
+          {/* Informações legais */}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center', 
+            flexWrap: 'wrap', 
+            gap: '16px',
+            fontSize: '0.875rem'
+          }}>
+            <div>
+              <p style={{ margin: '0', color: 'var(--gray-30)' }}>
+                © 2025 Governo do Distrito Federal. Todos os direitos reservados.
+              </p>
+            </div>
+            <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+              <span style={{ color: 'var(--gray-30)' }}>
+                Desenvolvido seguindo o Design System Gov.br
+              </span>
+              <span style={{ color: 'var(--gray-30)' }}>
+                Versão 1.0.0
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const HelpPage = () => {
+  return (
+    <div style={{ padding: '48px 0' }}>
+      <div className="container">
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="card">
+            <h1 style={{ textAlign: 'center', marginBottom: '32px' }}>
+              📚 Central de Ajuda
+            </h1>
+
+            {/* Perguntas Frequentes */}
+            <section style={{ marginBottom: '48px' }}>
+              <h2 style={{ marginBottom: '24px' }}>❓ Perguntas Frequentes</h2>
+
+              <div style={{ marginBottom: '24px' }}>
+                <h3 style={{ color: 'var(--blue-60)', marginBottom: '8px' }}>
+                  1. Com quanto tempo de antecedência devo fazer a solicitação?
+                </h3>
+                <p style={{ margin: '0', paddingLeft: '16px', borderLeft: '3px solid var(--blue-50)' }}>
+                  As solicitações devem ser encaminhadas à UNIAE via SEI com <strong>antecedência mínima de 15 dias</strong> em relação à data do evento. Solicitações enviadas fora do prazo não serão atendidas.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <h3 style={{ color: 'var(--blue-60)', marginBottom: '8px' }}>
+                  2. Quais são os horários disponíveis para o transporte?
+                </h3>
+                <p style={{ margin: '0', paddingLeft: '16px', borderLeft: '3px solid var(--blue-50)' }}>
+                  O serviço está disponível exclusivamente nos seguintes horários:<br />
+                  • <strong>Turno Matutino:</strong> das 9h (saída da escola) às 11h (retorno à escola)<br />
+                  • <strong>Turno Vespertino:</strong> das 14h (saída da escola) às 16h (retorno à escola)<br />
+                  Não há oferta de serviço no período integral ou turno noturno.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <h3 style={{ color: 'var(--blue-60)', marginBottom: '8px' }}>
+                  3. Quantos estudantes cabem em cada veículo?
+                </h3>
+                <p style={{ margin: '0', paddingLeft: '16px', borderLeft: '3px solid var(--blue-50)' }}>
+                  Cada veículo comporta até <strong>38 passageiros</strong>. O sistema calcula automaticamente a quantidade de veículos necessários com base no número de estudantes informado.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <h3 style={{ color: 'var(--blue-60)', marginBottom: '8px' }}>
+                  4. É obrigatório enviar a lista dos estudantes?
+                </h3>
+                <p style={{ margin: '0', paddingLeft: '16px', borderLeft: '3px solid var(--blue-50)' }}>
+                  Sim, o envio da <strong>lista nominal e numerada dos estudantes</strong> que utilizarão o transporte é obrigatório e deve ser anexada ao processo no SEI.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <h3 style={{ color: 'var(--blue-60)', marginBottom: '8px' }}>
+                  5. Como devo criar o processo no SEI?
+                </h3>
+                <p style={{ margin: '0', paddingLeft: '16px', borderLeft: '3px solid var(--blue-50)' }}>
+                  Em atendimento à LGPD (Lei nº 13.709/2018), os processos de solicitação de transporte escolar devem ser gerados com <strong>nível de acesso RESTRITO</strong>.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <h3 style={{ color: 'var(--blue-60)', marginBottom: '8px' }}>
+                  6. Posso cancelar uma solicitação já enviada?
+                </h3>
+                <p style={{ margin: '0', paddingLeft: '16px', borderLeft: '3px solid var(--blue-50)' }}>
+                  Sim, mas eventuais cancelamentos devem ser comunicados à UNIAE via SEI com <strong>antecedência mínima de 48 horas</strong>, para que a empresa responsável seja comunicada a tempo.
+                </p>
+              </div>
+            </section>
+
+            {/* Passo a passo */}
+            <section style={{ marginBottom: '48px' }}>
+              <h2 style={{ marginBottom: '24px' }}>📋 Passo a Passo Completo</h2>
+
+              <div style={{ 
+                display: 'grid', 
+                gap: '24px'
+              }}>
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '16px', 
+                  padding: '20px',
+                  backgroundColor: 'var(--gray-5)',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid var(--blue-50)'
+                }}>
+                  <div style={{ 
+                    width: '40px', 
+                    height: '40px', 
+                    backgroundColor: 'var(--blue-50)', 
+                    color: 'var(--gray-0)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    flexShrink: 0
+                  }}>
+                    1
+                  </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 8px 0' }}>Planejamento</h3>
+                    <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                      Defina a atividade extracurricular com pelo menos 15 dias de antecedência. Verifique se os horários estão dentro dos períodos disponíveis (9h-11h ou 14h-16h).
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '16px', 
+                  padding: '20px',
+                  backgroundColor: 'var(--gray-5)',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid var(--blue-50)'
+                }}>
+                  <div style={{ 
+                    width: '40px', 
+                    height: '40px', 
+                    backgroundColor: 'var(--blue-50)', 
+                    color: 'var(--gray-0)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    flexShrink: 0
+                  }}>
+                    2
+                  </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 8px 0' }}>Preenchimento do Formulário</h3>
+                    <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                      Acesse o formulário online e preencha todos os dados obrigatórios: informações da atividade, endereços, horários, número de estudantes e justificativa pedagógica.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '16px', 
+                  padding: '20px',
+                  backgroundColor: 'var(--gray-5)',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid var(--blue-50)'
+                }}>
+                  <div style={{ 
+                    width: '40px', 
+                    height: '40px', 
+                    backgroundColor: 'var(--blue-50)', 
+                    color: 'var(--gray-0)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    flexShrink: 0
+                  }}>
+                    3
+                  </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 8px 0' }}>Download do Requerimento</h3>
+                    <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                      Após preencher o formulário, baixe o arquivo do requerimento gerado automaticamente pelo sistema.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '16px', 
+                  padding: '20px',
+                  backgroundColor: 'var(--gray-5)',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid var(--blue-50)'
+                }}>
+                  <div style={{ 
+                    width: '40px', 
+                    height: '40px', 
+                    backgroundColor: 'var(--blue-50)', 
+                    color: 'var(--gray-0)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    flexShrink: 0
+                  }}>
+                    4
+                  </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 8px 0' }}>Preparação da Lista de Estudantes</h3>
+                    <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                      Prepare a lista nominal e numerada de todos os estudantes que participarão da atividade. Esta lista deve ser anexada ao processo.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '16px', 
+                  padding: '20px',
+                  backgroundColor: 'var(--gray-5)',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid var(--blue-50)'
+                }}>
+                  <div style={{ 
+                    width: '40px', 
+                    height: '40px', 
+                    backgroundColor: 'var(--blue-50)', 
+                    color: 'var(--gray-0)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    flexShrink: 0
+                  }}>
+                    5
+                  </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 8px 0' }}>Criação do Processo no SEI</h3>
+                    <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                      Acesse o sistema SEI e crie um novo processo com <strong>nível de acesso RESTRITO</strong>. Anexe o requerimento e a lista de estudantes.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '16px', 
+                  padding: '20px',
+                  backgroundColor: 'var(--gray-5)',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid var(--blue-50)'
+                }}>
+                  <div style={{ 
+                    width: '40px', 
+                    height: '40px', 
+                    backgroundColor: 'var(--blue-50)', 
+                    color: 'var(--gray-0)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    flexShrink: 0
+                  }}>
+                    6
+                  </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 8px 0' }}>Envio para a UNIAE</h3>
+                    <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                      Encaminhe o processo completo para a UNIAE através do SEI, respeitando o prazo mínimo de 15 dias de antecedência.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Documentos necessários */}
+            <section style={{ marginBottom: '48px' }}>
+              <h2 style={{ marginBottom: '24px' }}>📄 Documentos Necessários</h2>
+              
+              <div className="alert alert-info">
+                <h3 style={{ marginBottom: '16px' }}>Checklist de Documentos</h3>
+                <ul style={{ margin: '0', paddingLeft: '20px' }}>
+                  <li style={{ marginBottom: '8px' }}>
+                    ✅ Requerimento preenchido (gerado pelo sistema)
+                  </li>
+                  <li style={{ marginBottom: '8px' }}>
+                    ✅ Lista nominal e numerada dos estudantes participantes
+                  </li>
+                  <li style={{ marginBottom: '8px' }}>
+                    ✅ Justificativa pedagógica detalhada
+                  </li>
+                  <li style={{ marginBottom: '8px' }}>
+                    ✅ Processo SEI com nível de acesso RESTRITO
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Contato */}
+            <section style={{ marginBottom: '32px' }}>
+              <h2 style={{ marginBottom: '24px' }}>📞 Precisa de Mais Ajuda?</h2>
+              
+              <div style={{ 
+                backgroundColor: 'var(--gray-5)', 
+                padding: '24px', 
+                borderRadius: '8px',
+                textAlign: 'center'
+              }}>
+                <p style={{ margin: '0 0 16px 0', fontSize: '1.125rem' }}>
+                  Para dúvidas específicas sobre o processo, entre em contato com a UNIAE através do sistema SEI.
+                </p>
+                <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                  Lembre-se: este sistema é apenas para gerar o requerimento. O envio oficial deve ser feito via SEI.
+                </p>
+              </div>
+            </section>
+
+            {/* Botão para voltar */}
+            <div style={{ textAlign: 'center' }}>
+              <Link to="/formulario" className="btn btn-primary" style={{ marginRight: '16px' }}>
+                📝 Fazer Requerimento
+              </Link>
+              <Link to="/" className="btn btn-secondary">
+                🏠 Voltar ao Início
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HelpPage;
+
+// js/ui/filters.js
+
+export function setupFilters() {
+    const searchInput = document.querySelector(".search-input input");
+    const filterSelects = document.querySelectorAll(".filter-group select");
+
+    if (searchInput) {
+        searchInput.addEventListener("input", debounce(handleSearch, 300));
+    }
+
+    filterSelects.forEach((select) => {
+        select.addEventListener("change", handleFilterChange);
+    });
+}
+
+export function handleSearch(event) {
+    const query = event.target.value.toLowerCase();
+    console.log("Pesquisando por:", query);
+
+    // Simular busca
+    if (query.length > 2) {
+        // Aqui seria feita a busca real
+        showSearchResults(query);
+    }
+}
+
+export function handleFilterChange(event) {
+    const filter = event.target.name;
+    const value = event.target.value;
+    console.log("Filtro alterado:", filter, value);
+
+    // Aplicar filtros
+    applyFilters();
+}
+
+export function applyFilters() {
+    // Simular aplicação de filtros
+    const tableRows = document.querySelectorAll(".data-table tbody tr");
+    tableRows.forEach((row, index) => {
+        // Animação de entrada escalonada
+        row.style.animation = `slideInUp 0.3s ease ${index * 0.1}s forwards`;
+    });
+}
+
+function showSearchResults(query) {
+    console.log(`Exibindo resultados para: ${query}`);
+    // Lógica para exibir resultados da busca
+}
+
+function debounce(func, delay) {
+    let timeout;
+    return function(...args) {
+        const context = this;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+}
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const HomePage = () => {
+  return (
+    <div style={{ padding: '48px 0' }}>
+      <div className="container">
+        {/* Hero Section */}
+        <section style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <div style={{ 
+            maxWidth: '800px', 
+            margin: '0 auto',
+            padding: '48px 24px',
+            backgroundColor: 'var(--gray-0)',
+            borderRadius: '8px',
+            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)'
+          }}>
+            <div style={{ fontSize: '64px', marginBottom: '24px' }}>🚌</div>
+            <h1 style={{ 
+              fontSize: '2.5rem', 
+              marginBottom: '24px', 
+              color: 'var(--blue-60)',
+              fontWeight: '700'
+            }}>
+              Sistema de Requerimento de Transporte Escolar
+            </h1>
+            <p style={{ 
+              fontSize: '1.25rem', 
+              marginBottom: '32px', 
+              color: 'var(--gray-60)',
+              lineHeight: '1.6'
+            }}>
+              Facilite a solicitação de transporte escolar para atividades extracurriculares das unidades de ensino da SEDF
+            </p>
+            <Link 
+              to="/formulario" 
+              className="btn btn-primary"
+              style={{ 
+                fontSize: '1.125rem',
+                padding: '16px 32px',
+                textDecoration: 'none'
+              }}
+            >
+              Fazer Novo Requerimento
+            </Link>
+          </div>
+        </section>
+
+        {/* Informações importantes */}
+        <section style={{ marginBottom: '64px' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '48px' }}>
+            Informações Importantes
+          </h2>
+          
+          <div className="grid grid-2">
+            {/* Prazo */}
+            <div className="card">
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                <div style={{ 
+                  fontSize: '32px', 
+                  backgroundColor: 'var(--orange-vivid-20)', 
+                  padding: '12px',
+                  borderRadius: '8px',
+                  flexShrink: 0
+                }}>
+                  ⏰
+                </div>
+                <div>
+                  <h3 style={{ color: 'var(--gray-90)', marginBottom: '12px' }}>
+                    Antecedência Mínima
+                  </h3>
+                  <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                    Solicitações devem ser encaminhadas à UNIAE via SEI com <strong>antecedência mínima de 15 dias</strong> em relação à data do evento.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Horários */}
+            <div className="card">
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                <div style={{ 
+                  fontSize: '32px', 
+                  backgroundColor: 'var(--blue-50)', 
+                  color: 'var(--gray-0)',
+                  padding: '12px',
+                  borderRadius: '8px',
+                  flexShrink: 0
+                }}>
+                  🕐
+                </div>
+                <div>
+                  <h3 style={{ color: 'var(--gray-90)', marginBottom: '12px' }}>
+                    Horários Disponíveis
+                  </h3>
+                  <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                    <strong>Matutino:</strong> 9h às 11h<br />
+                    <strong>Vespertino:</strong> 14h às 16h<br />
+                    Não há serviço integral ou noturno.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Documentação */}
+            <div className="card">
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                <div style={{ 
+                  fontSize: '32px', 
+                  backgroundColor: 'var(--green-50)', 
+                  color: 'var(--gray-0)',
+                  padding: '12px',
+                  borderRadius: '8px',
+                  flexShrink: 0
+                }}>
+                  📋
+                </div>
+                <div>
+                  <h3 style={{ color: 'var(--gray-90)', marginBottom: '12px' }}>
+                    Documentação Obrigatória
+                  </h3>
+                  <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                    É obrigatório o envio da <strong>lista nominal e numerada dos estudantes</strong> que utilizarão o transporte.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* LGPD */}
+            <div className="card">
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                <div style={{ 
+                  fontSize: '32px', 
+                  backgroundColor: 'var(--gray-60)', 
+                  color: 'var(--gray-0)',
+                  padding: '12px',
+                  borderRadius: '8px',
+                  flexShrink: 0
+                }}>
+                  🔒
+                </div>
+                <div>
+                  <h3 style={{ color: 'var(--gray-90)', marginBottom: '12px' }}>
+                    Proteção de Dados
+                  </h3>
+                  <p style={{ margin: '0', color: 'var(--gray-60)' }}>
+                    Em atendimento à LGPD, os processos devem ser gerados com <strong>nível de acesso RESTRITO</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Alerta importante */}
+        <section style={{ marginBottom: '64px' }}>
+          <div className="alert alert-warning">
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <div style={{ fontSize: '24px', flexShrink: 0 }}>⚠️</div>
+              <div>
+                <h3 style={{ margin: '0 0 8px 0', fontSize: '1.125rem' }}>
+                  Atenção, Gestor!
+                </h3>
+                <p style={{ margin: '0' }}>
+                  O deslocamento desnecessário do veículo (sem o cancelamento prévio da UE) gera despesa pública que poderá configurar dano ao erário, com possível responsabilização por ato comissivo ou omissivo, conforme art. 183 da Lei Complementar nº 840 de 23/12/2011.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Como funciona */}
+        <section>
+          <h2 style={{ textAlign: 'center', marginBottom: '48px' }}>
+            Como Funciona
+          </h2>
+          
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+            gap: '32px',
+            maxWidth: '900px',
+            margin: '0 auto'
+          }}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ 
+                width: '80px', 
+                height: '80px', 
+                backgroundColor: 'var(--blue-50)', 
+                color: 'var(--gray-0)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '32px',
+                margin: '0 auto 16px auto'
+              }}>
+                1
+              </div>
+              <h3 style={{ marginBottom: '12px' }}>Preencha o Formulário</h3>
+              <p style={{ color: 'var(--gray-60)', margin: '0' }}>
+                Complete todos os dados da atividade extracurricular e informações de transporte necessárias.
+              </p>
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ 
+                width: '80px', 
+                height: '80px', 
+                backgroundColor: 'var(--blue-50)', 
+                color: 'var(--gray-0)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '32px',
+                margin: '0 auto 16px auto'
+              }}>
+                2
+              </div>
+              <h3 style={{ marginBottom: '12px' }}>Revise os Dados</h3>
+              <p style={{ color: 'var(--gray-60)', margin: '0' }}>
+                Confira todas as informações preenchidas antes de finalizar o requerimento.
+              </p>
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ 
+                width: '80px', 
+                height: '80px', 
+                backgroundColor: 'var(--blue-50)', 
+                color: 'var(--gray-0)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '32px',
+                margin: '0 auto 16px auto'
+              }}>
+                3
+              </div>
+              <h3 style={{ marginBottom: '12px' }}>Envie via SEI</h3>
+              <p style={{ color: 'var(--gray-60)', margin: '0' }}>
+                Encaminhe o requerimento gerado para a UNIAE através do sistema SEI.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
+
+// js/state.js
+
+export let appState = {
+    currentPage: 'dashboard',
+    lastUpdate: new Date(),
+    realTimeData: {
+        students: 12847,
+        vehicles: 156,
+        occupancy: 87,
+        kmMonth: 45678,
+        incidents: 23,
+        monthlyCost: 2847
+    },
+    alerts: [],
+    vehicles: []
+};
+
+export function updateAppState(newState) {
+    Object.assign(appState, newState);
+}
+
+

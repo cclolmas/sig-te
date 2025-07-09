@@ -1,0 +1,72 @@
+/* GlobalPages.module.css */
+
+/* Consolidando estilos globais */
+
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 8px;
+}
+
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.responsiveTable {
+  overflow-x: auto;
+  border-radius: var(--border-radius-lg);
+}
+
+.customDialog .MuiDialog-paper {
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue-50);
+  outline-offset: 2px;
+}
+
+/* Utilitário para centralizar conteúdo verticalmente */
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* Estilos adicionais para acessibilidade */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Estratégia de unificação:
+   - Migre variáveis de cor, espaçamento e tipografia para o theme do MUI.
+   - Para estilos globais, use CssBaseline e sobrescrita via theme.
+   - Mantenha apenas regras altamente específicas neste arquivo.
+*/
+
+/* Exemplo: remova variáveis globais e use apenas para casos específicos */
+.specificComponent {
+  /* ...estilos específicos... */
+}
+
+/* Remova regras globais como: */
+/*
+:root {
+  --primary-color: #1976d2;
+  --font-size-base: 16px;
+}
+*/
